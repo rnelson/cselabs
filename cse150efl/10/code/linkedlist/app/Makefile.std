@@ -1,0 +1,32 @@
+CC=gcc
+F90=gfortran
+
+DEBUG=
+ARCH=-m32
+
+CFLGS=-O3 $(ARCH)
+FFLGS=-O3 $(ARCH)
+
+BIN=week10
+COBJS=week10-curl.o
+FOBJS=week10.o week10-main.o
+
+SRC=week10.f90
+CCONF=curl-config
+
+all: week10
+
+week10: $(COBJS) $(FOBJS)
+	$(F90) $(DEBUG) -o $(BIN) $(LDFLAGS) `$(CCONF) --libs` $(FFLGS) $(COBJS) $(FOBJS)
+
+week10-curl.o: week10-curl.c
+	$(CC) -c $(DEBUG) -o week10-curl.o `$(CCONF) --cflags` $(CFLGS) week10-curl.c
+
+week10-main.o: week10-main.f90
+	$(F90) -c $(DEBUG) -o week10-main.o $(FFLGS) week10-main.f90
+
+week10.o: $(SRC)
+	$(F90) -c $(DEBUG) -o week10.o $(FFLGS) $(SRC)
+
+clean:
+	-rm $(BIN) week10*.o week10*.mod

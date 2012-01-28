@@ -1,0 +1,14 @@
+<html>
+<!-- 
+  Copyright Evan Goer, Jan 2003.
+  You may freely copy, share, and modify this file for non-profit, 
+  educational purposes only.  
+-->
+<head>
+    <title>A Simple Webpage</title>
+</head>
+<body>
+This is a simple webpage.
+And I mean <b>really</b> simple.
+</body>
+</html>

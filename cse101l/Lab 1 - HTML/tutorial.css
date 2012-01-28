@@ -1,0 +1,141 @@
+#main p, #main li, #main td, #main ol, #main ul, #main dd {
+  font: 12pt Georgia, serif;
+}
+
+p {
+  padding-right: 3px;
+}
+
+h1, h2, h3, h4, h5, h6, #side *, #top, #next, #main dl {
+  font-family: Tahoma, Verdana, sans-serif;
+}
+
+div.caution { 
+  float: right; 
+  width: 40%; 
+  background: #ff9; 
+  color: #000;
+  border: #000 1px solid; 
+  padding: 3px;
+} 
+
+div.exercise { 
+  /* float: right; */
+  /* width: 40%; */
+  background: #cccc99; 
+  color: #000;
+  border: #000 1px solid; 
+  padding: 3px;
+  margin-top: 3px;
+  margin-bottom: 3px;
+}
+
+code {
+  color: #630;
+  font: medium courier, monospace;
+}
+
+div.results {
+  background: #fff;
+  border: #000 1px solid;
+  padding: 5px;
+  width: 70%;
+}
+
+div.code {
+  background: #e0e0e0;
+  border: #000 1px solid;
+  padding: 5px;
+  width: 70%;
+}
+
+div.code pre {
+  color: #630;
+  font: medium courier, monospace;
+}
+
+#top {
+  border: #000 2px solid;
+  background: #ccf;
+  color: #000;
+  padding: 5px;
+  margin-bottom: 5px;
+  width: 99%;
+}
+
+#top a {
+  text-decoration: none;
+}
+
+a:hover {
+  color: #f00;
+}
+
+#main { 
+  border: #000 2px solid;
+  padding: 0px 0px 3px 18px;
+  background: #fff;
+}
+
+#side {
+  width: 25%;
+  float: right;
+  border-left: #000 2px solid;
+  border-bottom: #000 2px solid;
+  background: #ccf;
+  padding: 3px;
+}
+
+#date {
+  float: right;
+  font-weight: bold;
+}
+
+#next {
+  /* text-align: right; */
+  font-weight: bold;
+  padding-right: 3px;
+}
+
+#topnav {
+  float: left;
+}
+
+#search {
+  text-align: right;
+}
+
+#search form, #search form p {
+  display: inline;
+  text-align: right;
+}
+
+input.searchButton {
+  background: #66f;
+  color: #fff;
+  font-weight: bold;
+}
+
+#footer {
+  border: #000 2px solid;
+  background: #ccf;
+  color: #000;
+  padding: 5px;
+  margin-top: 5px;
+  text-align: center;
+  font-size: smaller;
+  font-family: Tahoma, Verdana, Arial, sans-serif;
+  width: 99%;
+}
+
+#footer a.nav {
+  text-decoration: none;
+  font-weight: bold;
+}
+
+img.valid {
+  border: 0px;
+  width: 88px;
+  height: 31px;
+  float: right;
+}

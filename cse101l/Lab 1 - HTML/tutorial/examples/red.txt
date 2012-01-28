@@ -1,0 +1,21 @@
+<html>
+<!-- 
+  Copyright Evan Goer, Jan 2003.
+  You may freely copy, share, and modify this file for non-profit, 
+  educational purposes only.  
+-->
+<head>
+    <title>Red Paragraphs</title>
+</head>
+<body>
+<p>
+  Happy Fun Ball -- Fun for the whole family!  
+  Only $14.95!
+</p>
+<p style="color: red">
+  WARNING: Pregnant women, the elderly and 
+  children under 10 should avoid prolonged 
+  exposure to Happy Fun Ball. 
+</p>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<html>
+<!-- 
+  Copyright Evan Goer, Feb 2003.
+  You may freely copy, share, and modify this file for non-profit, 
+  educational purposes only.  
+-->
+<head>
+  <title>Galaxy Quest</title>
+  <style type="text/css">
+  <!--
+    p {color: #000000}
+    p.guy {color: #ff0000}
+    p.gwen {color: #000080}
+    p.jason {color: #008000}
+  -->
+  </style>
+</head>
+<body>
+<p class="jason">
+  Jason Nesmith: You're not gonna die on the planet, Guy.
+</p>
+<p class="guy">
+  Guy Fleegman: I'm not? Then what's my last name?
+</p>
+<p class="jason">
+  Jason Nesmith: It's, uh, uh---I don't know.
+</p>
+<p class="guy">
+  Guy Fleegman: Nobody knows! Do you know why? 
+  Because my character isn't important enough for a 
+  last name, because I'm gonna die five minutes in.
+</p>
+<p class="gwen">
+  Gwen DeMarco: Guy, you have a last name.
+</p>
+<p class="guy">
+  Guy Fleegman: DO I?! DO I?!?! For all you know, 
+  I'm "Crewman Number Six"!
+</p>
+</body>
+</html>

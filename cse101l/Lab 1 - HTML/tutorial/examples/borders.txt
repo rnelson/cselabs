@@ -1,0 +1,53 @@
+<html>
+<!-- 
+  Copyright Evan Goer, Feb 2003.
+  You may freely copy, share, and modify this file for non-profit, 
+  educational purposes only.  
+-->
+<head>
+  <title>Borders</title>
+  <style type="text/css">
+  <!--
+    div.thickline { 
+      border-width: 10px;
+      border-style: solid;
+    }
+    
+    div.thinblueline {
+      border-width: 1px;
+      border-color: #0000ff;
+      border-style: solid;
+    }
+    
+    div.greenridge {
+      border-width: 5px;
+      border-color: green;
+      border-style: ridge;
+    }
+    
+    div.empurpledash {
+      border-width: 0.5em;
+      border-color: #800080;
+      border-style: dashed;
+    }
+  -->
+  </style>
+</head>
+<body>
+<div class="thickline">
+Thick Line
+</div>
+<br>
+<div class="thinblueline">
+Thin Blue Line
+</div>
+<br>
+<div class="greenridge">
+Green Ridge
+</div>
+<br>
+<div class="empurpledash">
+Em Purple Dash
+</div>
+</body>
+</html>

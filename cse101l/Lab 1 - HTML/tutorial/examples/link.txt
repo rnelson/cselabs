@@ -1,0 +1,13 @@
+<html>
+<!-- 
+  Copyright Evan Goer, Jan 2003.
+  You may freely copy, share, and modify this file for non-profit, 
+  educational purposes only.  
+-->
+<head>
+    <title>Link to Yahoo</title>
+</head>
+<body>
+<a href="http://www.yahoo.com">link to Yahoo<a>
+</body>
+</html>

@@ -1,0 +1,243 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+		<meta name="robots" content="all" />
+		<meta name="generator" content="RapidWeaver" />
+		
+		<title>HTML Tutorial - Intermediate - Classes and IDs</title>
+		<link rel="stylesheet" type="text/css" media="screen" href="../../rw_common/themes/interslice/styles.css"  />
+		<link rel="stylesheet" type="text/css" media="print" href="../../rw_common/themes/interslice/print.css"  />
+		<link rel="stylesheet" type="text/css" media="handheld" href="../../rw_common/themes/interslice/handheld.css"  />
+		<link rel="stylesheet" type="text/css" media="screen" href="../../rw_common/themes/interslice/css/width/width_default.css" />
+		<link rel="stylesheet" type="text/css" media="screen" href="../../rw_common/themes/interslice/css/sidebar/sidebar_left.css" />
+		
+		
+		
+		
+		<script type="text/javascript" src="../../rw_common/themes/interslice/javascript.js"></script>
+		
+		
+		<link rel="stylesheet" href="../../tutorial.css" type="text/css">
+	</head>
+<body>
+<div id="container"><!-- Start container -->
+	
+	<div id="pageHeader"><!-- Start page header -->
+		
+		<h1>HTML Tutorial</h1>
+		<h2></h2>
+	</div><!-- End page header -->
+	
+	<div id="sidebarContainer"><!-- Start Sidebar wrapper -->
+		<div id="navcontainer"><!-- Start Navigation -->
+			<ul><li><a href="../../index.html" rel="self">Home</a></li><li><a href="../../tutorial/index.html" rel="self" class="currentAncestor">Tutorial</a><ul><li><a href="../../tutorial/background/index.html" rel="self">Background</a></li><li><a href="../../tutorial/introduction/index.html" rel="self">Introduction</a></li><li><a href="../../tutorial/basic/index.html" rel="self">Basic</a></li><li><a href="../../tutorial/intermediate/index.html" rel="self" class="currentAncestor">Intermediate</a><ul><li><a href="../../tutorial/intermediate/stylesheets.html" rel="self">Style Sheets</a></li><li><a href="classesids.html" rel="self" id="current">Classes and IDs</a></li><li><a href="../../tutorial/intermediate/divspan.html" rel="self">Div and Span</a></li><li><a href="../../tutorial/intermediate/fontcontrol.html" rel="self">Font Control</a></li><li><a href="../../tutorial/intermediate/borders.html" rel="self">Borders</a></li><li><a href="../../tutorial/intermediate/marginspadding.html" rel="self">Margins and Padding</a></li><li><a href="../../tutorial/intermediate/alignindent.html" rel="self">Align and Indent</a></li></ul></li><li><a href="../../tutorial/advanced/index.html" rel="self">Advanced</a></li></ul></li><li><a href="../../license.html" rel="self">License</a></li><li><a href="../../about.html" rel="self">About</a></li></ul>
+		</div><!-- End navigation --> 
+		<div id="sidebar"><!-- Start sidebar content -->
+			<h1 class="sideHeader"></h1><!-- Sidebar header -->
+			 <br /><!-- sidebar content you enter in the page inspector -->
+			 <!-- sidebar content such as the blog archive links -->
+		</div><!-- End sidebar content -->
+	</div><!-- End sidebar wrapper -->
+	
+	<div id="contentContainer"><!-- Start main content wrapper -->
+		<div id="content"><!-- Start content -->
+			<h2>Classes and IDs</h2>
+
+<p>
+  The <a href="stylesheets.html">last section</a> demonstrated how a style sheet 
+  can apply a style to all tags in a web page.  If we want all our paragraphs to
+  be red, we just need to specify <code>p {color:&nbsp;red}</code> in the 
+  style sheet.  Easy, we're done.
+</p>
+<p>
+  But what if we want only <em>some</em> paragraphs to be red?  We 
+  <em>could</em> override our "red-text" rule by making copious use of
+  the <code>style</code> attribute:
+  <code>&lt;p&nbsp;style="color:&nbsp;black"...</code>.  However, this
+  solution is difficult to apply consistently, particularly if our styles are more
+  complicated than simply changing the text color.
+</p>
+<p>
+  Fortunately, there is a way to "name" a style and re-use it over and over.
+</p>
+<h3>Style Sheet Classes</h3>
+<p>
+  Consider the following example:  we have an exchange of dialogue
+  between three movie characters, and we want to differentiate each
+  character's lines by applying a unique style.  It would be tedious and
+  counterproductive to write out the full style in each 
+  <code>&lt;p&gt;</code> tag.  Instead, let's define each style 
+  <em>once</em> in the style sheet -- and call it multiple times by using
+  a <dfn>class</dfn>.
+</p>
+<p><small>
+  (Quotes courtesy of <a href="http://www.imdb.com">The Internet 
+  Movie Database</a>. Used with permission.)
+</small></p>
+<div class="code">
+<h4 class="inline">Three Classes
+(<code><a href="../examples/3classes.txt">source</a></code>)</h4> <pre>
+&lt;html&gt;
+&lt;head&gt;
+  &lt;title&gt;Galaxy Quest&lt;/title&gt;
+  &lt;style type="text/css"&gt;
+  &lt;!--
+    p {color: #000000}
+    <b>p.guy {color: #ff0000}
+    p.gwen {color: #000080}
+    p.jason {color: #008000}</b>
+  --&gt;
+  &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;p <b>class="jason"</b>&gt;
+  Jason Nesmith: You're not gonna die on the planet, Guy.
+&lt;/p&gt;
+&lt;p <b>class="guy"</b>&gt;
+  Guy Fleegman: I'm not? Then what's my last name?
+&lt;/p&gt;
+&lt;p <b>class="jason"</b>&gt;
+  Jason Nesmith: It's, uh, uh---I don't know.
+&lt;/p&gt;
+&lt;p <b>class="guy"</b>&gt;
+  Guy Fleegman: Nobody knows! Do you know why? 
+  Because my character isn't important enough for a 
+  last name, because I'm gonna die five minutes in.
+&lt;/p&gt;
+&lt;p <b>class="gwen"</b>&gt;
+  Gwen DeMarco: Guy, you have a last name.
+&lt;/p&gt;
+&lt;p <b>class="guy"</b>&gt;
+  Guy Fleegman: DO I?! DO I?!?! For all you know, 
+  I'm "Crewman Number Six"!
+&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</pre>
+</div>
+
+<p>
+  For each character we've defined a class ("guy", "gwen", and "jason").  
+  Note the format: instead of
+</p>
+<div class="code">
+<pre>  tagname&nbsp;{style&nbsp;information}</pre>
+</div>
+<p>
+  We have
+</p>
+<div class="code">
+<pre>  tagname.classname&nbsp;{style&nbsp;information}</pre>
+</div>
+<p>
+  The results are as follows:
+</p>
+<div class="results">
+<h4 class="inline">Three Classes (Results)</h4>
+<p style="color: #008000">
+   Jason Nesmith: You're not gonna die on the planet, Guy.
+</p>
+<p style="color: #ff0000">
+  Guy Fleegman: I'm not? Then what's my last name?
+</p>
+<p style="color: #008000">
+  Jason Nesmith: It's, uh, uh---I don't know.
+</p>
+<p style="color: #ff0000">
+  Guy Fleegman: Nobody knows! Do you know why? 
+  Because my character isn't important enough for a 
+  last name, because I'm gonna die five minutes in.
+</p>
+<p style="color: #000080">
+  Gwen DeMarco: Guy, you have a last name.
+</p>
+<p style="color: #ff0000">
+  Guy Fleegman: DO I?! DO I?!?! For all you know, 
+  I'm "Crewman Number Six"!
+</p>
+</div>
+<p> 
+  Once we define our classes, we can apply them to any paragraph through the 
+  <code>class</code> attribute.  In the simple example above we've just 
+  changed the text color.  We could easily have made the styling much 
+  more complicated.
+</p>
+<h4>Generic Classes</h4>
+<p>
+  In the example above, we created our classes to work with the 
+  <code>&lt;p&gt;</code> tag.  Applying them to some other
+  tag (as in, <code>&lt;em class="guy"&gt;</code>) would fail.  However,
+  we <em>can</em> create <em>generic classes</em>, which are
+  classes that are meant to work with any kind of tag.  The syntax is as follows:
+</p>
+<div class="code">
+<pre>  .guy {color: #ff0000}</pre>
+</div>
+<p>
+  Note the absence of a tag name before the period:  the class name stands 
+  alone.  
+</p>
+<div class="caution">
+<h4 class="inline">Caution: Generic Classes</h4>
+<p>
+  <code>Internet Explorer 4</code> understands
+  ordinary classes but doesn't understand generic classes.  For this reason, I 
+  avoid using generic classes unless they are absolutely necessary.
+  Usually, they're not.
+</p>
+</div>
+
+<h3>Unique IDs</h3>
+<p>
+  Another method for assigning styles is to use an <em>ID</em>.  An ID
+  is a unique identifier for a tag on a page.  
+  IDs are different from classes in a couple of ways:
+</p>
+<ul>
+  <li>IDs are unique.  You may only use a particular ID once on a page.</li>
+  <li>IDs can be used in the same way as 
+  <a href="../basic/links.html#named">named anchors</a>, to create a link
+  to a specific location within a page.  However, this technique does not 
+  work in some older browsers.</li>
+  <li>IDs can be used by a JavaScript script to access a particular component
+  of a web page.  JavaScript is beyond the scope of this tutorial.
+</ul>
+<p>
+  If you want to apply a style to an ID, the syntax should look familiar.  Instead
+  of using a period, use a hash mark (<code>#</code>):
+</p>
+<div class="code">
+<pre>  p#guy {color: #ff0000}</pre>
+</div>
+<p>
+  That's it.  In order to apply the style, you would just write 
+  <code>&lt;p id="guy"&gt;</code> (as opposed to 
+  <code>&lt;p class="guy"&gt;</code>.)
+  The only problem here is that you may only apply <code>id="guy"</code>
+  <em>once</em> on the entire web page.  In other words, we are presuming 
+  that Guy Fleegman is speaking only once -- probably a bad assumption.  If you 
+  use IDs in your style sheets, make sure that they are for <em>unique</em> 
+  elements (such as a navigation bar that appears only once on the page).
+</p>
+
+<div id="next">
+  
+Next: <a href="divspan.html">Div and Span</a>
+  
+</div>
+		</div><!-- End content -->
+	</div><!-- End main content wrapper -->
+	
+	<div class="clearer"></div>
+	
+	<div id="footer"><!-- Start Footer -->
+		<div id="breadcrumbcontainer"><!-- Start the breadcrumb wrapper -->
+			<ul><li><a href="../../index.html">Home</a>&nbsp;>&nbsp;</li><li><a href="../../tutorial/index.html">Tutorial</a>&nbsp;>&nbsp;</li><li><a href="../../tutorial/intermediate/index.html">Intermediate</a>&nbsp;>&nbsp;</li><li><a href="classesids.html">Classes and IDs</a>&nbsp;>&nbsp;</li></ul>
+		</div><!-- End breadcrumb -->
+		<p>Copyright &copy; 2009 Ross Nelson</p>
+	</div><!-- End Footer -->
+
+</div><!-- End container -->
+</body>
+</html>

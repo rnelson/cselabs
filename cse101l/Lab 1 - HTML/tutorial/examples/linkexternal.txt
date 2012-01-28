@@ -1,0 +1,20 @@
+<html>
+<!-- 
+  Copyright Evan Goer, Jan 2003.
+  You may freely copy, share, and modify this file for non-profit, 
+  educational purposes only.  
+-->
+<head>
+    <title>External Links</title>
+</head>
+<body>
+<p>
+  A link to <a href="http://www.google.com/">Google's 
+  home page</a>.
+</p>
+<p>
+  A link to <a href="http://www.google.com/help/basics.html">a 
+  page within Google</a>.
+</p>
+</body>
+</html>

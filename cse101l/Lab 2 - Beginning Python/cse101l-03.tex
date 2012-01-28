@@ -1,0 +1,218 @@
+% CSCE 101L - Week 3 (Beginning Python)
+% $Id: cse101l-03.tex 110 2009-01-28 19:06:18Z rnelson $
+
+\documentclass[11pt, letterpaper]{article}
+
+\usepackage{fancyhdr,picture}
+\usepackage{listings}
+\usepackage{times}
+\usepackage{graphicx}
+\usepackage{amssymb}
+\usepackage{algorithm,verbatim}
+\usepackage{charter}
+\usepackage[usenames]{color}
+
+\usepackage[bf, hang, small]{caption}
+%%%%% Set page counter here
+\setcounter{page}{1}
+\renewcommand{\headrulewidth}{1.0pt}
+\renewcommand{\footrulewidth}{1.0pt}
+
+\setlength{\captionmargin}{20pt}
+\setlength{\oddsidemargin}{0.12in}
+\setlength{\textwidth}{6.3in}
+\setlength{\topmargin}{-0.5in}
+\setlength{\textheight}{9.0 in}
+\setlength{\parskip}{3pt plus 1pt minus 1pt}
+
+%%%%% Set header and footer information here
+\pagestyle{fancy}
+\fancyhf{}
+\lhead[]{\small{CSCE 101L}}
+\rhead[]{\small{Week 3}}
+\rfoot[]{\small{University of Nebraska--Lincoln}}
+\lfoot[]{\small{Computer Science and Engineering}}
+\cfoot{\small{\thepage}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+% Define light-gray
+\definecolor{light-gray}{gray}{0.70}
+\lstset{language=Python, backgroundcolor=\color{light-gray}}
+
+\section*{Background}
+
+\subsection*{Scripting?}
+
+Programming languages are classified as either {\em interpreted} or {\em compiled}.
+
+A compiled language is transformed into a {\em binary} format that runs only on a specific type or types of computer. The advantage to a compiled program is that it runs really fast. The computer's CPU simply needs to read small instructions and execute them one after another. The speed comes at a price: as mentioned, only certain computers can run the compiled program.
+
+An alternative to a compiled language like C or Ada is is an interpreted language. {\tt BASIC} is an example of an interpreted language. More commonly used today are {\em scripting languages}: Perl, Ruby, Python, shell scripting, DOS batch programs, and so forth.
+
+(To make things complicated, some languages like Java and C\#, are both compiled and interpreted.)
+
+With the speed of computers today, simple programs will run incredibly fast whether interpreted or compiled. It isn't until intensive number crunching and complicated loops are used that a compiled language has a huge advantage over an interpreted.
+
+\subsection*{Why?}
+
+Why do we care about any of this? We're gonna do some scripting! The first 12 weeks (at least) of lecture can be easily supplemented by doing some real programming in lab. Few if any students have any experience programming so we want it to be as simple as possible. When it comes to programming languages, the easiest ones are often those that include a large {\em library} of powerful {\em functions} to do a lot of work for you. The one that we're going to play with is Python.
+
+\section*{Hello, world!}
+
+To make scripts easy to run, we need to set the first in the file to something specific that tells the computer what program should run the script. This line is called a {\em shebang}, {\em hashbang}, {\em hashpling}, or {\em pound bang}.
+
+For our Python code, the shebang will be:
+
+\begin{lstlisting}
+#!/usr/bin/env python
+\end{lstlisting}
+
+Once we have this line, we can simply start writing our program. That's all the setup that's required.
+
+One of the basic things that many programs need to do is print out text. In Python, the command to print text to the screen is simply {\tt print}. Let's print the standard {\em Hello, World!} text to the screen:
+
+\begin{lstlisting}
+print ``Hello, World!''
+\end{lstlisting}
+
+Notice that the text we want to print is in quote marks. Without them, Python will try to find {\em variables} with those names. More on variables later.
+
+Our program is now two lines long:
+
+\begin{lstlisting}
+#!/usr/bin/env python
+print ``Hello, World!''
+\end{lstlisting}
+
+So how do we run it? Simply type the name of the file in an SSH window:
+
+\begin{lstlisting}
+cse rnelson/p> helloworld.py 
+Hello, World!
+cse rnelson/p>
+\end{lstlisting}
+
+Did your output not quite match? If the program is not set to {\em +x} (e{\bf x}ecutable). The {\em chmod} program will let us set the script to be executable:
+
+\begin{lstlisting}
+cse rnelson/p> helloworld.py
+helloworld.py: Permission denied.
+cse rnelson/p> chmod +x helloworld.py 
+cse rnelson/p> helloworld.py
+Hello, World!
+cse rnelson/p>
+\end{lstlisting}
+
+Now if you try running it again (by typing the filename and hitting enter), you should see your message.
+
+\section*{Yawn}
+
+That was boring. What fun is programming if all we can do is print out some text to the screen? Let's get some data from the user. The easiest way to get text is the {\tt raw\_input()} function: {\tt variable = raw\_input(``prompt text'')}.
+
+\begin{lstlisting}
+#!/usr/bin/env python
+text = raw_input(``Enter some text: '')
+print ``You typed: '', text
+\end{lstlisting}
+
+That program will prompt the user to enter text and then echo it back to them. Fancy!
+
+\section*{Numbers}
+
+The information stored in {\tt text} is a {\em string}. If what it contains is a number, you still can't do any math on it as-is. You need to cast, convert, parse (fairly interchangeable terms) the string into a number.
+
+To convert a string into an integer, Python includes a {\tt int()} function. The following program will take input from the user and store it into an integer; the integer can then be used in mathematical operations (as shown)
+
+\begin{lstlisting}
+#!/usr/bin/env python
+numstring = raw_input(``Enter a number: '')
+x = int(numstring)
+minusx = -x
+print ``0 - x = '', minusx
+\end{lstlisting}
+
+Let's try running it:
+
+\begin{lstlisting}
+cse rnelson/p> ./math.py 
+Enter a number: 5
+0 - x =  -5
+cse rnelson/p>
+\end{lstlisting}
+
+Awesome! Can we break it? Give it a word instead of a number:
+
+\begin{lstlisting}
+cse rnelson/p> ./math.py
+Enter a number: hi
+Traceback (most recent call last):
+  File "./math.py", line 3, in <module>
+    x = int(numstring)
+ValueError: invalid literal for int() with base 10: 'hi'
+cse rnelson/p>
+\end{lstlisting}
+
+Turns out {\em hi} isn't a valid number in base 10.
+
+
+\section*{Week 3 Lab: Basic Python}
+
+\subsection*{Directions}
+
+You will be writing two programs in Python this week.
+
+\subsubsection*{Program 1: Hello World}
+
+Write a program that does nothing but prints out the text {\em Bonjour, le monde!}. Make sure you don't have any extra spaces before, after, or within the text. {\em Bonjour}, comma, space, {\em le}, space, {\em monde}, exclamation point.
+
+Save this file as {\tt hello.py}.
+
+\subsubsection*{Program 2: Calculator}
+
+Write a program that gets two numbers from the user and performs the four basic math operations (addition, subtraction, multiplication, and division) on them. The numbers may be integer values or real values; to accommodate both, parse them as real numbers using the {\tt float()} function.
+
+\begin{enumerate}
+	\item Addition: $1 + 2$
+	\item Subtraction: $1 - 2$
+	\item Multiplication: $1 * 2$
+	\item Division: $1 / 2$
+\end{enumerate}
+
+The following is an example run of a possible solution:
+
+\begin{lstlisting}
+cse rnelson/p> ./calc.py 
+X: 1
+Y: 2
+3.0
+-1.0
+2.0
+0.5
+cse rnelson/p>
+\end{lstlisting}
+
+Notice my prompts; {\tt X}, colon, space and {\tt Y}, colon, space. The user typed in 1 and 2 for the two values and then the values of the four operations (in the order given above) are displayed, each on their own line.
+
+Save this file as {\tt calc.py}.
+
+\subsection*{Handing in}
+
+I have not had a handin account setup for the lab yet. When I do, you will submit code through a web-based submission system used by the department. Assuming I have the account by that point, these programs (as well as the HTML stuff from last week) will be due at 3:20 PM next Wednesday (4 Feb. 2009).
+
+\subsection*{Grading}
+
+\begin{tabular}{lr}
+	Area & Points\\
+	\hline
+	{\em Hello} works: & 5\\
+	{\em Hello} identical output: & 3\\
+	{\em Hello} correct filename: & 2\\
+	{\em Calc} works: & 5\\
+	{\em Calc} identical output: & 3\\
+	{\em Calc} correct filename: & 2\\
+	{\bf Total:} & 20
+\end{tabular}
+
+\end{document}

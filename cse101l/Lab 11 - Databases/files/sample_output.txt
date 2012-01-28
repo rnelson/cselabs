@@ -1,0 +1,39 @@
+rnelson:files> grades.py --create
+rnelson:files> grades.py --data
+rnelson:files> grades.py --print
+Ross Nelson:
+   Lab 1 => 20.0/20.0
+   Lab 2 => 20.0/20.0
+   Lab 3 => 30.0/30.0
+   Quiz 1 => 10.0/10.0
+   Test 1 => 45.0/45.0
+   Final => 60.0/60.0
+Alex Harvey:
+   Lab 1 => 19.0/20.0
+   Lab 2 => 20.0/20.0
+   Lab 3 => 30.0/30.0
+   Quiz 1 => 10.0/10.0
+   Test 1 => 43.0/45.0
+   Final => 54.0/60.0
+Suzie Shorey:
+   Lab 1 => 3.0/20.0
+   Lab 2 => 15.0/20.0
+   Lab 3 => 16.0/30.0
+   Quiz 1 => 6.0/10.0
+   Test 1 => 32.0/45.0
+   Final => 47.0/60.0
+Jen Shin:
+   Lab 1 => 20.0/20.0
+   Lab 2 => 19.0/20.0
+   Lab 3 => 29.0/30.0
+   Quiz 1 => 8.0/10.0
+   Test 1 => 44.0/45.0
+   Final => 56.0/60.0
+Travis Munson:
+   Lab 1 => 18.0/20.0
+   Lab 2 => 18.0/20.0
+   Lab 3 => 29.0/30.0
+   Quiz 1 => 9.0/10.0
+   Test 1 => 45.0/45.0
+   Final => 60.0/60.0
+rnelson:files>

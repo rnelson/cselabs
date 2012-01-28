@@ -1,0 +1,30 @@
+<html>
+<!-- 
+  Copyright Evan Goer, Feb 2003.
+  You may freely copy, share, and modify this file for non-profit, 
+  educational purposes only.  
+-->
+<head>
+  <title>When Irish Eyes Are Smiling</title>
+  <style type="text/css">
+  <!--
+    p {color: #008000; background: #ffff00}
+  -->
+  </style>
+</head>
+<body>
+<p>
+  Here's how the chorus goes:
+</p>
+<p>
+  When Irish eyes are smiling,<br>
+  Sure, 'tis like the morn in Spring.<br>
+  In the lilt of Irish laughter<br>
+  You can hear the angels sing.<br>
+  When Irish hearts are happy,<br>
+  All the world seems bright and gay.<br>
+  And when Irish eyes are smiling,<br>
+  Sure, they steal your heart away.<br>
+</p>
+</body>
+</html>

@@ -1,0 +1,4 @@
+/* default float side for sidebar */
+#sidebarContainer {
+	float: left;
+}

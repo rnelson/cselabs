@@ -1,0 +1,19 @@
+<html>
+<!-- 
+  Copyright Evan Goer, Jan 2003.
+  You may freely copy, share, and modify this file for non-profit, 
+  educational purposes only.  
+-->
+<head>
+    <title>Unordered List</title>
+</head>
+<body>
+<h3>My Dot-com Business Plan</h3>
+<ul style="list-style-type: square; color: #009900">
+  <li>Buy domain name</li>
+  <li>Put up website</li>
+  <li style="list-style-type: disc; color: #ff0000">???</li>
+  <li>Profit!!</li>
+</ul>
+</body>
+</html>

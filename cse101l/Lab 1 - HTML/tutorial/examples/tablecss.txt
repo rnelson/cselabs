@@ -1,0 +1,43 @@
+<html>
+<!-- 
+  Copyright Evan Goer, Mar 2003.
+  You may freely copy, share, and modify this file for non-profit, 
+  educational purposes only.  
+-->
+<head>
+
+  <title>Various Combinations of Border, Padding, Spacing</title>
+  <style>
+  <!--
+  table { 
+    background: #009900;
+    border: 4px #ff00ff ridge;
+    border-spacing: 5px;
+  }
+
+  td {
+    background: #ffff00;
+    padding: 10px;
+    border: 2px #0000ff dotted;
+  }
+
+  td.middle {
+    border: 2px #ff0000 solid;
+    padding-right: 25px;
+  } 
+  -->
+</head>
+<body>
+
+<table 
+  border="0" cellpadding="0" cellspacing="0"
+  summary="No padding, spacing, or borders">
+<tr>
+  <td>Left Cell</td>
+  <td class="middle">Middle Cell</td>
+  <td>Right Cell</td>
+</tr>
+</table>
+
+</body>
+</html>

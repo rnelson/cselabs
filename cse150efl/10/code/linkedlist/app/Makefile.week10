@@ -1,0 +1,44 @@
+# Note: the currently (28 Mar 2010) installed cURL on cse returns nothing for --cflags and
+# only -lcurl for --libs, so I grabbed the latest source and built it in the class account.
+# Works.
+
+# Compilers
+#CC=icc
+#F90=ifort
+CC=gcc
+FC=gfortran
+
+# Build options
+DEBUG=
+ARCH=-m64
+SRC=week10.f95
+CURLCONF=/home/grad/Classes_102/cse150efl/files/sw/bin/curl-config
+SHAREDSRCDIR=/home/grad/Classes_102/cse150efl/files/
+
+# Compiler flags
+CFLGS=-O3 $(ARCH)
+FFLGS=-O3 $(ARCH)
+
+# Source and output variables
+BIN=week10
+COBJS=week10-curl.o
+FOBJS=week10.o week10-main.o
+OBJS=$(COBJS) $(FOBJS)
+
+all: week10
+
+week10: $(OBJS)
+	$(FC) $(DEBUG) -o $(BIN) `$(CURLCONF) --libs` $(FFLGS) $(OBJS)
+
+week10-curl.o:
+	$(CC) $(DEBUG) -c -o week10-curl.o `$(CURLCONF) --cflags` $(CFLGS) $(SHAREDSRCDIR)week10-curl.c
+
+week10-main.o:
+	$(FC) $(DEBUG) -c -o week10-main.o $(FFLGS) $(SHAREDSRCDIR)week10-main.f90
+
+week10.o:
+	$(FC) $(DEBUG) -c -o week10.o $(FFLGS) $(SRC)
+
+clean:
+	-rm $(BIN) week10*.o week10*.mod
+

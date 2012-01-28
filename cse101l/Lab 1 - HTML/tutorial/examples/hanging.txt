@@ -1,0 +1,36 @@
+<html>
+<!-- 
+  Copyright Evan Goer, Feb 2003.
+  You may freely copy, share, and modify this file for non-profit, 
+  educational purposes only.  
+-->
+<head>
+  <title>Hanging Indent</title>
+  <style type="text/css">
+  <!--
+    div {
+      padding-top: 5px;
+      padding-bottom: 5px;
+      padding-right: 5px;
+      padding-left: 30px;
+      border: 3px solid;
+    }
+    h4 {
+      text-indent: -25px;
+    }
+  -->
+  </style>
+</head>
+<body>
+<div>
+<h4>The Red-Headed League</h4>
+<p>
+  I had called upon my friend, Mr. Sherlock Holmes, one day in the
+  autumn of last year, and found him in deep conversation with a very
+  stout, florid-faced elderly gentleman, with fiery red hair.  With
+  an apology for my intrusion, I was about to withdraw, when Holmes
+  pulled me abruptly into the room and closed the door behind me.
+</p>
+</div>
+</body>
+</html>

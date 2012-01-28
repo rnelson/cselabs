@@ -1,0 +1,285 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+		<meta name="robots" content="all" />
+		<meta name="generator" content="RapidWeaver" />
+		
+		<title>HTML Tutorial - Intermediate - Align and Indent</title>
+		<link rel="stylesheet" type="text/css" media="screen" href="../../rw_common/themes/interslice/styles.css"  />
+		<link rel="stylesheet" type="text/css" media="print" href="../../rw_common/themes/interslice/print.css"  />
+		<link rel="stylesheet" type="text/css" media="handheld" href="../../rw_common/themes/interslice/handheld.css"  />
+		<link rel="stylesheet" type="text/css" media="screen" href="../../rw_common/themes/interslice/css/width/width_default.css" />
+		<link rel="stylesheet" type="text/css" media="screen" href="../../rw_common/themes/interslice/css/sidebar/sidebar_left.css" />
+		
+		
+		
+		
+		<script type="text/javascript" src="../../rw_common/themes/interslice/javascript.js"></script>
+		
+		
+		<link rel="stylesheet" href="../../tutorial.css" type="text/css">
+	</head>
+<body>
+<div id="container"><!-- Start container -->
+	
+	<div id="pageHeader"><!-- Start page header -->
+		
+		<h1>HTML Tutorial</h1>
+		<h2></h2>
+	</div><!-- End page header -->
+	
+	<div id="sidebarContainer"><!-- Start Sidebar wrapper -->
+		<div id="navcontainer"><!-- Start Navigation -->
+			<ul><li><a href="../../index.html" rel="self">Home</a></li><li><a href="../../tutorial/index.html" rel="self" class="currentAncestor">Tutorial</a><ul><li><a href="../../tutorial/background/index.html" rel="self">Background</a></li><li><a href="../../tutorial/introduction/index.html" rel="self">Introduction</a></li><li><a href="../../tutorial/basic/index.html" rel="self">Basic</a></li><li><a href="../../tutorial/intermediate/index.html" rel="self" class="currentAncestor">Intermediate</a><ul><li><a href="../../tutorial/intermediate/stylesheets.html" rel="self">Style Sheets</a></li><li><a href="../../tutorial/intermediate/classesids.html" rel="self">Classes and IDs</a></li><li><a href="../../tutorial/intermediate/divspan.html" rel="self">Div and Span</a></li><li><a href="../../tutorial/intermediate/fontcontrol.html" rel="self">Font Control</a></li><li><a href="../../tutorial/intermediate/borders.html" rel="self">Borders</a></li><li><a href="../../tutorial/intermediate/marginspadding.html" rel="self">Margins and Padding</a></li><li><a href="alignindent.html" rel="self" id="current">Align and Indent</a></li></ul></li><li><a href="../../tutorial/advanced/index.html" rel="self">Advanced</a></li></ul></li><li><a href="../../license.html" rel="self">License</a></li><li><a href="../../about.html" rel="self">About</a></li></ul>
+		</div><!-- End navigation --> 
+		<div id="sidebar"><!-- Start sidebar content -->
+			<h1 class="sideHeader"></h1><!-- Sidebar header -->
+			 <br /><!-- sidebar content you enter in the page inspector -->
+			 <!-- sidebar content such as the blog archive links -->
+		</div><!-- End sidebar content -->
+	</div><!-- End sidebar wrapper -->
+	
+	<div id="contentContainer"><!-- Start main content wrapper -->
+		<div id="content"><!-- Start content -->
+			<h2>Align and Indent</h2>
+
+<h3>Indenting Text</h3>
+<p>
+  You've probably noticed that most 
+  <acronym title="HyperText Markup Language">HTML</acronym> 
+  paragraphs (such as this one) don't 
+  have an initial indent.  However, you can add an indent with the 
+  <code>text-indent</code> property.  The following 
+  <acronym title="Cascading Style Sheets">CSS</acronym> snippet adds
+  a <code>2.0em</code> indent to all paragraphs:
+</p>
+<div class="code">
+<h4 class="inline">Indented Paragraphs
+(<code><a href="../examples/indent.txt">source</a></code>)</h4>
+<pre>
+p {
+  text-indent: 2.0em;
+}
+</pre>
+</div>
+<p>
+  The effect is straightforward:
+</p>
+<div class="results">
+<h4 class="inline">Indented Paragraphs (Results)</h4>
+<p style="text-indent: 2.0em">
+  "On the contrary," said Holmes, quietly, "I have every reason to
+  believe that I will succeed in discovering Mr. Hosmer Angel."
+</p>
+<p style="text-indent: 2.0em">
+  Mr. Windibank gave a violent start, and dropped his gloves.  "I am
+  delighted to hear it," he said.
+</p>
+<p style="text-indent: 2.0em">
+  "It is a curious thing," remarked Holmes, "that a typewriter has
+  really quite as much individuality as a man's handwriting.  Unless
+  they are quite new no two of them write exactly alike.  Some
+  letters get more worn than others, and some wear only on one side.
+  Now, you remark in this note of yours, Mr. Windibank, that in every
+  case there is some little slurring over the e, and a slight defect
+  in the tail of the r.  There are fourteen other characteristics,
+  but those are the more obvious."
+</p>
+</div>
+<p>
+  If you enter a negative value for <code>text-indent</code>, the first
+  line of the text will shift to the <em>left</em>.  This can be useful in creating
+  "hanging indents" for headings and the like.  The only trick is that you must
+  set the padding of containing block accordingly.
+</p>
+<div class="code">
+<h4 class="inline">Hanging Indent
+(<code><a href="../examples/hanging.txt">source</a></code>)</h4>
+<pre>
+div {
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-right: 5px;
+  padding-left: 30px;
+  border: 3px solid;
+}
+h4 {
+  text-indent: -25px;
+}
+</pre>
+</div>
+<p>
+  The "container" <code>&lt;div&gt;</code> has a uniform padding 
+  of <code>5px</code> all around, except for the left padding, which is
+  <code>30px</code>.  The <code>&lt;h4&gt;</code> tag has its 
+  <code>text-indent</code> set to <em>negative</em> <code>25px</code>.
+  This means that:
+</p>
+<ul>
+  <li>The <code>&lt;h4&gt;</code> shifts 30px to the right (due to the padding) and then shifts 25px to the left (due to the negative <code>text-indent</code>.</li>
+  <li>Everything else should be <code>30px</code> from the left edge.</li>
+</ul>
+<p>
+  The result is a <code>25px</code> hanging indent.
+</p>
+<div class="results">
+<h4 class="inline">Hanging Indent (Results)</h4>
+<br>
+<br>
+<div style="
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-right: 5px;
+  padding-left: 30px;
+  border: 3px solid;
+">
+<h4 style="text-indent: -25px;">The Red-Headed League</h4>
+<p>
+  I had called upon my friend, Mr. Sherlock Holmes, one day in the
+  autumn of last year, and found him in deep conversation with a very
+  stout, florid-faced elderly gentleman, with fiery red hair.  With
+  an apology for my intrusion, I was about to withdraw, when Holmes
+  pulled me abruptly into the room and closed the door behind me.
+</p>
+</div>
+</div>
+
+<h3>Horizontal Alignment</h3>
+<p>
+  The <code>text-align</code> property allows you to align text to the 
+  right, left, or center within its containing block.  The four options are:
+</p>
+<ul>
+  <li><code>left</code> (usually the default)</li>
+  <li><code>center</code></li>
+  <li><code>right</code></li>
+  <li><code>justify</code> (justify both edges of the text)</li>
+</ul>
+<p>
+  Let's take a look at all four options:
+</p>
+<div class="code">
+<h4 class="inline">Left, Center, Right, Justified
+(<code><a href="../examples/halign.txt">source</a></code>)</h4>
+<pre>
+div {
+  border: 3px solid;
+  padding: 5px;
+}
+
+div.left {
+  text-align: left;
+  background: #ffcccc;
+}
+
+div.center {
+  text-align: center;
+  background: #ccffcc;
+}
+
+div.right {
+  text-align: right;
+  background: #ccccff;
+}
+
+div.justify {
+  text-align: justify;
+  background: #ffffcc;
+}
+</pre>
+</div>
+<p>
+  Note that the <code>justify</code> option isn't as well-supported in some
+  browsers as the other options.  If you're using an older browser, you might
+  not see the <code>justify</code> option working properly.
+</p>
+<div class="results">
+<h4 class="inline">Left, Center, Right, Justified (Results)</h4>
+<br>
+<br>
+<div style="
+  border: 3px solid;
+  padding: 5px;
+  text-align: left;
+  background: #ffcccc;
+">
+  Left-aligned text.
+</div>
+<br>
+<div style="
+  border: 3px solid;
+  padding: 5px;
+  text-align: center;
+  background: #ccffcc;
+">
+  Centered text.
+</div>
+<br>
+<div style="
+  border: 3px solid;
+  padding: 5px;
+  text-align: right;
+  background: #ccccff;
+">
+  Right-aligned text.
+</div>
+<br>
+<div style="
+  border: 3px solid;
+  padding: 5px;
+  text-align: justify;
+  background: #ffffcc;
+">
+  Justified text.  This text needs to be kind of long, so that we can see that it
+  is justified on both sides of the box.  Obviously we need to prattle on for a 
+  bit before we can stop.  How long does it have to be, anyway?  Well, 
+  that depends on the size of the window and the font you're using.  Here
+  is probably a good stopping place.  So we'll stop here.  Riiigghhtt... now.
+</div>
+</div>
+<p>
+  The <code>text-align</code> property affects text and images 
+  <em>inside</em> of blocks -- it does not
+  affect blocks themselves, such as <code>&lt;div&gt;</code>s and 
+  <a href="../advanced/tables.html" title="'Tables'">tables</a>.
+  We'll cover the alignment of blocks when we cover 
+  <acronym title="Cascading Style Sheets">CSS</acronym> positioning in the
+  <a href="../advanced/index.html" 
+  title="Advanced HTML and CSS topics">advanced</a> section.  
+</p>
+
+<div class="exercise">
+<h4 class="inline">Exercise 6</h4>
+<p>
+  Create a new HTML file, <code>css.html</code>.
+</p>
+<p>
+  Use an embedded stylesheet and experiment with each of the techniques
+  covered in this section: <a href="classesids.html">classes and IDs</a>,
+  <a href="divspan.html">divs and spans</a>, <a href="fontcontrol.html">font control</a>,
+  <a href="borders.html">borders</a>, <a href="marginspadding.html">margins and padding</a>,
+  and <a href="alignindent.html">alignment and indentation</a>.
+</p>
+</div>
+
+<div id="next">
+  
+Next: <a href="../advanced/index.html">Advanced</a>
+  
+</div>
+		</div><!-- End content -->
+	</div><!-- End main content wrapper -->
+	
+	<div class="clearer"></div>
+	
+	<div id="footer"><!-- Start Footer -->
+		<div id="breadcrumbcontainer"><!-- Start the breadcrumb wrapper -->
+			<ul><li><a href="../../index.html">Home</a>&nbsp;>&nbsp;</li><li><a href="../../tutorial/index.html">Tutorial</a>&nbsp;>&nbsp;</li><li><a href="../../tutorial/intermediate/index.html">Intermediate</a>&nbsp;>&nbsp;</li><li><a href="alignindent.html">Align and Indent</a>&nbsp;>&nbsp;</li></ul>
+		</div><!-- End breadcrumb -->
+		<p>Copyright &copy; 2009 Ross Nelson</p>
+	</div><!-- End Footer -->
+
+</div><!-- End container -->
+</body>
+</html>

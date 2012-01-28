@@ -1,0 +1,26 @@
+<html>
+<!-- 
+  Copyright Evan Goer, Jan 2003.
+  You may freely copy, share, and modify this file for non-profit, 
+  educational purposes only.  
+-->
+<head>
+    <title>Nested Ordered List</title>
+</head>
+<body>
+<h3>Schedule for Monday</h3>
+<ol style="list-style-type: upper-roman">
+  <li>Suppress Gaul
+    <ol style="list-style-type: upper-alpha">
+      <li>Two more legions or three?</li>
+      <li>Where to put victory arch?  Forum's 
+        looking crowded...</li>
+    </ol>
+  </li>
+  <li>Have Cicero killed</li>
+  <li>Lunch</li>
+  <li>Head-and-hands-on-pike viewing at
+    the Forum (casual dress ok?)</li>
+</ol>
+</body>
+</html>

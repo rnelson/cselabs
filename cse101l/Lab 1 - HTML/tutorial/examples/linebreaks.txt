@@ -1,0 +1,32 @@
+<html>
+<!-- 
+  Copyright Evan Goer, Jan 2003.
+  You may freely copy, share, and modify this file for non-profit, 
+  educational purposes only.  
+-->
+<head>
+    <title>Buffy Quotes: Line Breaks</title>
+</head>
+<body>
+<p>
+  My Buffy Quotes
+</p>
+<p>
+  Angel: "Dear Buffy..." Hmmm. I'm still trying to 
+          decide the best way to send my regards.<br>
+  Spike: Why don't you rip her lungs out? That might 
+         make an impression.<br>
+  Angel: Lacks... poetry.<br>
+  Spike: Doesn't have to. What rhymes with lungs?<br>
+</p>
+<p>
+  Cordelia: You're really campaigning for bitch of 
+            the year, aren't you?<br>
+  Buffy: As defending champion, you nervous?<br>
+</p>
+<p>
+  Principal Snyder: It's woolly-headed liberal thinking 
+                    like that that gets you eaten.
+</p>
+</body>
+</html>

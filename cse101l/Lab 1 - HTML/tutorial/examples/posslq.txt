@@ -1,0 +1,35 @@
+<html>
+<!-- 
+  Copyright Evan Goer, Feb 2003.
+  You may freely copy, share, and modify this file for non-profit, 
+  educational purposes only.  
+-->
+<head>
+  <title>Dotted Underline</title>
+  <style type="text/css">
+  <!--
+    acronym.dotted {
+      border-bottom-width: 1px;
+      border-bottom-color: #00000;
+      border-bottom-style: dotted;
+    }
+  -->
+  </style>
+</head>
+<body>
+<p>
+  There's nothing that I wouldn't do,<br>
+  If you would be my <acronym 
+    title="Person of Opposite Sex Sharing Living Quarters"
+    class="dotted"
+  >POSSLQ</acronym>,<br>
+  You'd live for me and I for you<br>
+  If you would be my <acronym 
+    title="Person of Opposite Sex Sharing Living Quarters"
+  >POSSLQ</acronym>.
+</p>
+<p>
+  (author unknown)
+</p>
+</body>
+</html>

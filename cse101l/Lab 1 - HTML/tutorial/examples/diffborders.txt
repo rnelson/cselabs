@@ -1,0 +1,37 @@
+<html>
+<!-- 
+  Copyright Evan Goer, Feb 2003.
+  You may freely copy, share, and modify this file for non-profit, 
+  educational purposes only.  
+-->
+<head>
+  <title>Four Different Sides</title>
+  <style type="text/css">
+  <!--
+    div.fourborders { 
+      border-top-width: 5px;
+      border-top-color: #ff0000;
+      border-top-style: dashed;
+    
+      border-bottom-width: 10px;
+      border-bottom-color: #336600;
+      border-bottom-style: groove;
+    
+      border-right-width: 20px;
+      border-right-color: #000080;
+      border-right-style: solid;
+    
+      border-left-width: 10px;
+      border-left-color: #CC9900;
+      border-left-style: solid;
+    }
+  -->
+  </style>
+</head>
+<body>
+<div class="fourborders">
+Welcome to the Funhouse!<br>
+Please keep your arms and legs inside the vehicle at all times.<br>
+</div>
+</body>
+</html>

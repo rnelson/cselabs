@@ -1,0 +1,36 @@
+<html>
+<!-- 
+  Copyright Evan Goer, Jan 2003.
+  You may freely copy, share, and modify this file for non-profit, 
+  educational purposes only.  
+-->
+<head>
+    <title>Floating Image</title>
+</head>
+<body>
+<p>
+<img src="oscope.gif" height="32" width="45"
+  alt="Shrunken oscilloscope">
+<b>Not Your Father's Oscilloscope...</b>
+<img src="oscope.gif" height="32" width="45"
+  alt="Shrunken oscilloscope">
+</p>
+<img src="oscope.gif" height="64" width="90"
+  alt="Right-floating oscilloscope"
+  style="float: right">
+<p>
+  <b>The Model XJ-2000:</b>
+  Quality, quality, quality.  That's what our bosses 
+  asked for when we designed the XJ-2000, and that's 
+  what we delivered. Our competitors claim to deliver
+  "quality"... but do they?  Sure, they prattle on about 
+  about sample rates, picosecond/div sweep rates, 
+  Fast Fourier Transforms, and other technical 
+  mumbo-jumbo.But the fact is that the XJ-2000 is 
+  light-years ahead of the competition.  From the 
+  scratch-resistant chrome case to the innovative 
+  green-phosophorescent screen, only one word should 
+  spring to mind when you look at the XJ-2000: quality. 
+</p>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<html>
+<!-- 
+  Copyright Evan Goer, Feb 2003.
+  You may freely copy, share, and modify this file for non-profit, 
+  educational purposes only.  
+-->
+<head>
+  <title>Two Margin Blocks</title>
+  <style type="text/css">
+  <!--
+    div.even {
+      background: #ccffcc;
+      border: 3px solid;
+      padding: 5px;
+      margin: 40px;
+    }
+    div.uneven {
+      background: #ffcccc;
+      border: 3px solid;
+      padding: 5px;
+      margin-top: 20px;
+      margin-right: 80px;
+      margin-bottom: 40px;
+      margin-left: 60px;
+    }
+  -->
+  </style>
+</head>
+<body>
+<div class="even">
+  margin: 40px (all)<br>
+  padding: 5px (all)
+</div>
+<div class="uneven">
+   margin-top: 40px<br>
+   margin-right: 30px<br>
+   margin-left: 20px<br>
+   margin-bottom: 10px<br>
+   padding: 5px (all)
+</div>
+</body>
+</html>

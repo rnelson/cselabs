@@ -1,0 +1,26 @@
+<html>
+<!-- 
+  Copyright Evan Goer, Jan 2003.
+  You may freely copy, share, and modify this file for non-profit, 
+  educational purposes only.  
+-->
+<head>
+    <title>Distorted Images</title>
+</head>
+<body>
+<p>
+  We've got 'em in all sizes, folks:
+</p>
+<img src="oscope.gif" height="128" width="180"
+  alt="double-sized oscilloscope">
+
+<img src="oscope.gif" height="64" width="90"
+  alt="normal-sized oscilloscope"> 
+
+<img src="oscope.gif" height="32" width="45"
+  alt="half-sized oscilloscope, for the kids!"> 
+
+<img src="oscope.gif" height="64" width="45"
+  alt="floor-model oscilloscope - big discount!"> 
+</body>
+</html>

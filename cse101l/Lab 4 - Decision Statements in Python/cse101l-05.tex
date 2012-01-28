@@ -1,0 +1,232 @@
+% CSCE 101L - Week 5 (Decision Statements in Python)
+% $Id: cse101l-05.tex 120 2009-02-11 06:23:28Z rnelson $
+
+\documentclass[11pt, letterpaper]{article}
+
+\usepackage{fancyhdr,picture}
+\usepackage{listings}
+\usepackage{times}
+\usepackage{graphicx}
+\usepackage{amssymb}
+\usepackage{algorithm,verbatim}
+\usepackage{charter}
+\usepackage[usenames]{color}
+
+\usepackage[bf, hang, small]{caption}
+%%%%% Set page counter here
+\setcounter{page}{1}
+\renewcommand{\headrulewidth}{1.0pt}
+\renewcommand{\footrulewidth}{1.0pt}
+
+\setlength{\captionmargin}{20pt}
+\setlength{\oddsidemargin}{0.12in}
+\setlength{\textwidth}{6.3in}
+\setlength{\topmargin}{-0.5in}
+\setlength{\textheight}{9.0 in}
+\setlength{\parskip}{3pt plus 1pt minus 1pt}
+
+%%%%% Set header and footer information here
+\pagestyle{fancy}
+\fancyhf{}
+\lhead[]{\small{CSCE 101L}}
+\rhead[]{\small{Lab 4}}
+\rfoot[]{\small{University of Nebraska--Lincoln}}
+\lfoot[]{\small{Computer Science and Engineering}}
+\cfoot{\small{\thepage}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+% Define light-gray
+\definecolor{light-gray}{gray}{0.70}
+\lstset{language=Python, backgroundcolor=\color{light-gray}}
+
+
+%
+% In past labs, I have included the
+% content to be covered in the PDF.
+% While this would be great for a
+% self-paced course, the idea (I'm
+% told) is to market this course to
+% high schools. Generally, a teacher
+% will go over background information
+% ahead of time. When I have some
+% time, I intend to go back through
+% and create:
+% 	- Background material in a
+%		booklet form
+%	- Lab exercises
+%	- Instructor's manual
+%
+%%%%%%%
+% Items to be covered on a board
+%%%%%%%
+%
+% - Boolean logic
+%	- Named for George Boole
+%	- Operators
+%		- AND
+%		- OR
+%		- NOT
+%	- Binary (AND, OR) vs unary (NOT)
+% - Relational operators in Python
+%	- >, <, <=, >=
+%	- ==, !=
+%
+%%%%%%%
+% Items to be covered on a projector from interactive Python
+%%%%%%%
+%
+% - Pure Boolean logic
+%	- 'not True'
+%	- 'not False'
+%	- 'True or True'
+%	- 'True or False'
+%	- 'False or True'
+%	- 'False or False'
+%	- 'True and False'
+%	- 'True and True'
+% - Boolean relational operators
+%	- '18 > 9'
+%	- '9 <= 12'
+%	- '9 <= 9'
+%	- '3 == 3'
+%	- '3 != 4'
+% - Combining the two; arithmetic has a higher precedence than relational, relational than Boolean
+%	- '8 < 10 and 10 < 12'
+%	- '(8 < 10) and (100 >= 12)' -- readability
+%	- 'x = 15'
+%	  '3 < x < 21' -- chaining
+% - 0/0.0 = False, N - {0} = True
+%	- >>> not 1
+%	  False
+%	- >>> not 0
+%	  True
+%	- 'not 3.14'
+%	   False
+% - Short circuiting, left -> right
+%	- '1/0'
+%	  'True or 1/0'
+% - Mention ASCII ordering
+%	- 'A' < 'a'
+%	- 'A' > 'z'
+%	- 'abc' < 'abcd'
+
+\section*{Syntax}
+
+\begin{lstlisting}
+if condition:
+  block
+
+if condition1:
+  block
+elif condition2:
+  block
+elif ...
+
+if condition1:
+  block
+elif condition2:
+  block
+elif ...
+else:
+  block
+\end{lstlisting}
+
+% Discuss the fact that it checks conditions in the order presented and goes down the branch for the
+% first that matches.
+
+
+
+\section*{Lab 4: Decision Statements in Python}
+
+\subsection*{Exercise 1: Fix your calculator}
+
+Use {\tt calc.py} (Lab 2, not Lab 3 where you put it in a function) as a base. Save it as {\tt bettercalc.py}.
+
+Make two additions to this program: a menu to choose a mathematical operation and a division-by-zero check.
+
+\subsubsection*{Menu}
+
+When the program starts, print a menu allowing the user to type in a number 1 through 4 (matching the following table) to choose the operation they wish to use:\vspace{0.25cm}
+
+\begin{tabular}{|c|c|}
+	\hline
+	{\bf Number} & {\bf Operation}\\
+	\hline
+	1 & Addition (+)\\
+	2 & Subtraction (-)\\
+	3 & Multiplication (*)\\
+	4 & Division (/)\\
+	\hline
+\end{tabular}
+
+Based on what number the user chooses, perform {\em that} operation. If the user chooses $2$, only subtract the two numbers. Do not add, multiply, and divide the numbers.
+
+\subsubsection*{Division-by-Zero Check}
+
+In normal arithmetic, division by zero is undefined. If you try to divide by $0$ in Python, you receive an error that looks like this:
+
+\begin{lstlisting}
+ZeroDivisionError: integer division or modulo by zero
+\end{lstlisting}
+
+A program crashing on a user with a {\tt ZeroDivisionError} is obviously not a good thing. What would be better is catching that situation before doing the division and stopping it. Add a decision statement to your program to not allow division by $0$. If the user chooses $0$ as their second number, simply display an error message and don't perform any mathematical operation.
+
+\subsection*{Exercise 2: Guessing Game}
+
+Create a number guessing game. Start with the following code:
+
+\begin{lstlisting}
+import random
+
+guessed = False
+number = random.randrange(1, 10)
+\end{lstlisting}
+
+{\small Note: You will probably have to type this in manually as copying and pasting from these PDFs rarely works as planned.}
+
+This code will use a random number library, a set of functions, types, and constants. The {\tt randrange()} function will generate a random number between two numbers, in this case 1 and 10 (inclusive).
+
+Continue on with that code to write a program that gives a user {\em up to} three chances to guess the number.
+
+\begin{enumerate}
+	\item The {\em guessed} variable is to specify whether or not the user has guessed the correct value. You do not want to give them the second and third chances if they guessed it on the first try.
+	\item After the user has guessed, if the guess is wrong, give the user a hint. Tell them the number is higher than their guess or is lower than their guess. (Use the relational operators to check that.) For this, you will need to do nested if statements.
+\end{enumerate}
+
+This problem is not at all difficult, but it does require more thought than previous programs you have written. Feel free to work in groups of 2 or 3 on this problem (do Exercise 1 alone). {\bf If you do work with others}, place a comment near the top of the file listing the names of people who worked on it and their login name. Each person should submit the file. Example:
+
+\begin{lstlisting}
+#!/usr/bin/env python
+#
+# Lab 4, Exercise 2 (Guessing Game)
+# 
+# Ross Nelson <rnelson>, Chris McMacken <cmcmacke>, Lisa
+# Hemingson <lhemingso>
+
+import random
+
+guessed = False
+number = random.randrange(1, 10)
+.
+.
+.
+\end{lstlisting}
+
+\subsection*{Handing in}
+
+Submit your two Python scripts on the {\tt cse101l} handin. They are due by 23:59 on Friday, February 13, 2009.
+
+\subsection*{Grading}
+
+\begin{tabular}{lr}
+	Area & Points\\
+	\hline
+	Programs work and & ~\\
+	meet requirements: & 15\\
+	Correct filenames: & 5\\
+	{\bf Total:} & 20
+\end{tabular}
+
+\end{document}

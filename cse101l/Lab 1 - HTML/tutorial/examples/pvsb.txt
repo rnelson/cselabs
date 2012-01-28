@@ -1,0 +1,21 @@
+<html>
+<!-- 
+  Copyright Evan Goer, Jan 2003.
+  You may freely copy, share, and modify this file for non-profit, 
+  educational purposes only.  
+-->
+<head>
+    <title>Paragraph vs. Bold</title>
+</head>
+<body>
+<p>
+  1. This is a paragraph with a section of 
+  <b>bold text</b> inside of it.
+</p>
+
+<b>
+  2. This is a section of bold text with 
+  <p>a paragraph</p> inside of it.
+</b>
+</body>
+</html>

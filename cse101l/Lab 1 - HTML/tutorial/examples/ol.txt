@@ -1,0 +1,19 @@
+<html>
+<!-- 
+  Copyright Evan Goer, Jan 2003.
+  You may freely copy, share, and modify this file for non-profit, 
+  educational purposes only.  
+-->
+<head>
+    <title>Ordered List</title>
+</head>
+<body>
+<h3>My Dot-com Business Plan</h3>
+<ol>
+  <li>Buy domain name</li>
+  <li>Put up website</li>
+  <li>???</li>
+  <li>Profit!!</li>
+</ol>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<html>
+<!-- 
+  Copyright Evan Goer, Feb 2003.
+  You may freely copy, share, and modify this file for non-profit, 
+  educational purposes only.  
+-->
+<head>
+  <title>Indented Paragraphs </title>
+  <style type="text/css">
+  <!--
+    p {
+      text-indent: 2.0em;
+    }
+  -->
+  </style>
+</head>
+<body>
+<p>
+  "On the contrary," said Holmes, quietly, "I have every reason to
+  believe that I will succeed in discovering Mr. Hosmer Angel."
+</p>
+<p>
+  Mr. Windibank gave a violent start, and dropped his gloves.  "I am
+  delighted to hear it," he said.
+</p>
+<p>
+  "It is a curious thing," remarked Holmes, "that a typewriter has
+  really quite as much individuality as a man's handwriting.  Unless
+  they are quite new no two of them write exactly alike.  Some
+  letters get more worn than others, and some wear only on one side.
+  Now, you remark in this note of yours, Mr. Windibank, that in every
+  case there is some little slurring over the e, and a slight defect
+  in the tail of the r.  There are fourteen other characteristics,
+  but those are the more obvious."
+</p>
+</body>
+</html>

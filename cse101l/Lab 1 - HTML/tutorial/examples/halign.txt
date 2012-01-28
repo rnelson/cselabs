@@ -1,0 +1,59 @@
+<html>
+<!-- 
+  Copyright Evan Goer, Feb 2003.
+  You may freely copy, share, and modify this file for non-profit, 
+  educational purposes only.  
+-->
+<head>
+  <title>Hanging Indent</title>
+  <style type="text/css">
+  <!--
+    div {
+      border: 3px solid;
+      padding: 5px;
+    }
+    
+    div.right {
+      text-align: left;
+      background: #ffcccc;
+    }
+    
+    div.center {
+      text-align: center;
+      background: #ccffcc;
+    }
+    
+    div.right {
+      text-align: right;
+      background: #ccccff;
+    }
+    
+    div.justify {
+      text-align: justify;
+      background: #ffffcc;
+    }
+  -->
+  </style>
+</head>
+<body>
+<div class="left">
+  Left-aligned text.
+</div>
+<br>
+<div class="center">
+  Centered text.
+</div>
+<br>
+<div class="right">
+  Right-aligned text.
+</div>
+<br>
+<div class="justify">
+  Justified text.  This text needs to be kind of long, so that we can see that it
+  is justified on both sides of the box.  Obviously we need to prattle on for a 
+  bit before we can stop.  How long does it have to be, anyway?  Well, 
+  that depends on the size of the window and the font you're using.  Here
+  is probably a good stopping place.  So we'll stop here.  Riiigghhtt... now.
+</div>
+</body>
+</html>

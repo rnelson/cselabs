@@ -1,0 +1,40 @@
+<html>
+<!-- 
+  Copyright Evan Goer, Feb 2003.
+  You may freely copy, share, and modify this file for non-profit, 
+  educational purposes only.  
+-->
+<head>
+  <title>The Four Seasons</title>
+</head>
+<body>
+<table cellpadding="5" border="2"
+  summary="All 12 months, organized by season">
+<caption>The Four Seasons</caption>
+<tr>
+  <th>Spring</th>
+  <th>Summer</th>
+  <th>Fall</th>
+  <th>Winter</th>
+</tr>
+<tr>
+  <td>March</td>
+  <td>June</td>
+  <td>September</td>
+  <td>December</td>
+</tr>
+<tr>
+  <td>April</td>
+  <td>July</td>
+  <td>October</td>
+  <td>January</td>
+</tr>
+<tr>
+  <td>May</td>
+  <td>August</td>
+  <td>November</td>
+  <td>February</td>
+</tr>
+</table>
+</body>
+</html>

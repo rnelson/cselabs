@@ -1,0 +1,26 @@
+<html>
+<!-- 
+  Copyright Evan Goer, Jan 2003.
+  You may freely copy, share, and modify this file for non-profit, 
+  educational purposes only.  
+-->
+<head>
+    <title>Text and Background Color</title>
+</head>
+<body>
+<p style="background: yellow">
+  There's a yellow rose in Texas, That I am going to see,<br>
+  Nobody else could miss her, Not half as much as me.<br>
+  She cried so when I left her It like to broke my heart,<br>
+  And if I ever find her, We nevermore will part. <br>
+</p>
+
+<p style="background: green; color: red">
+  You're a monster, Mr. Grinch.<br>
+  Your heart's an empty hole.<br>
+  Your brain is full of spiders,<br>
+  You've got garlic in your soul.<br>
+  Mr. Grinch.<br>
+</p>
+</body>
+</html>

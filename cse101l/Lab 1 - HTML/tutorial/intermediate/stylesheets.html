@@ -1,0 +1,402 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+		<meta name="robots" content="all" />
+		<meta name="generator" content="RapidWeaver" />
+		
+		<title>HTML Tutorial - Intermediate - Style Sheets</title>
+		<link rel="stylesheet" type="text/css" media="screen" href="../../rw_common/themes/interslice/styles.css"  />
+		<link rel="stylesheet" type="text/css" media="print" href="../../rw_common/themes/interslice/print.css"  />
+		<link rel="stylesheet" type="text/css" media="handheld" href="../../rw_common/themes/interslice/handheld.css"  />
+		<link rel="stylesheet" type="text/css" media="screen" href="../../rw_common/themes/interslice/css/width/width_default.css" />
+		<link rel="stylesheet" type="text/css" media="screen" href="../../rw_common/themes/interslice/css/sidebar/sidebar_left.css" />
+		
+		
+		
+		
+		<script type="text/javascript" src="../../rw_common/themes/interslice/javascript.js"></script>
+		
+		
+		<link rel="stylesheet" href="../../tutorial.css" type="text/css">
+	</head>
+<body>
+<div id="container"><!-- Start container -->
+	
+	<div id="pageHeader"><!-- Start page header -->
+		
+		<h1>HTML Tutorial</h1>
+		<h2></h2>
+	</div><!-- End page header -->
+	
+	<div id="sidebarContainer"><!-- Start Sidebar wrapper -->
+		<div id="navcontainer"><!-- Start Navigation -->
+			<ul><li><a href="../../index.html" rel="self">Home</a></li><li><a href="../../tutorial/index.html" rel="self" class="currentAncestor">Tutorial</a><ul><li><a href="../../tutorial/background/index.html" rel="self">Background</a></li><li><a href="../../tutorial/introduction/index.html" rel="self">Introduction</a></li><li><a href="../../tutorial/basic/index.html" rel="self">Basic</a></li><li><a href="../../tutorial/intermediate/index.html" rel="self" class="currentAncestor">Intermediate</a><ul><li><a href="stylesheets.html" rel="self" id="current">Style Sheets</a></li><li><a href="../../tutorial/intermediate/classesids.html" rel="self">Classes and IDs</a></li><li><a href="../../tutorial/intermediate/divspan.html" rel="self">Div and Span</a></li><li><a href="../../tutorial/intermediate/fontcontrol.html" rel="self">Font Control</a></li><li><a href="../../tutorial/intermediate/borders.html" rel="self">Borders</a></li><li><a href="../../tutorial/intermediate/marginspadding.html" rel="self">Margins and Padding</a></li><li><a href="../../tutorial/intermediate/alignindent.html" rel="self">Align and Indent</a></li></ul></li><li><a href="../../tutorial/advanced/index.html" rel="self">Advanced</a></li></ul></li><li><a href="../../license.html" rel="self">License</a></li><li><a href="../../about.html" rel="self">About</a></li></ul>
+		</div><!-- End navigation --> 
+		<div id="sidebar"><!-- Start sidebar content -->
+			<h1 class="sideHeader"></h1><!-- Sidebar header -->
+			 <br /><!-- sidebar content you enter in the page inspector -->
+			 <!-- sidebar content such as the blog archive links -->
+		</div><!-- End sidebar content -->
+	</div><!-- End sidebar wrapper -->
+	
+	<div id="contentContainer"><!-- Start main content wrapper -->
+		<div id="content"><!-- Start content -->
+			<h2>Style Sheets</h2>
+
+<p>So far we've dealt with two major components to our web pages:  the <em>tags</em>, which define the basic structure of the page, and the <em>styling</em>, which further refines how the page should look.  We saw the effects of styling in the <a href="../basic/colors.html">Colors</a> section:</p>
+
+<div class="code">
+<h4 class="inline">Red Paragraphs 
+(<code><a href="../examples/red.txt">source</a></code>)</h4> 
+<pre>
+&lt;p&gt;
+  Happy Fun Ball -- Fun for the whole family!  
+  Only $14.95!
+&lt;/p&gt;
+&lt;p style="color: red"&gt;
+  WARNING: Pregnant women, the elderly and 
+  children under 10 should avoid prolonged 
+  exposure to Happy Fun Ball. 
+&lt;/p&gt;
+</pre>
+</div>
+
+<p>
+  The <code>&lt;p&gt;</code> tag tells us that we have two paragraphs.  The 
+  <code>style="color: red"</code> attribute indicates that the second paragraph
+  should be colored red.
+</p>
+<p>
+  Now, it's nice that we can make red paragraphs -- but what if we wanted 
+  <em>all</em> paragraphs to be red?  It would be a pain to have to specify 
+  this every single time.  Fortunately, there is a solution:  the <dfn>style 
+  sheet</dfn>.
+</p>
+
+<h3>What are Style Sheets?</h3>
+<p>
+  Every time we've specified <code>style="(something)"</code>, we've actually 
+  created a <acronym title="Cascading Style Sheets">CSS</acronym> rule.
+  CSS (Cascading Style Sheets) is a separate language from 
+  <acronym title="HyperText Markup Language">HTML</acronym> proper.
+  However, CSS is an indispensable tool for anyone working with HTML; it 
+  augments your ability to design webpages and enables you to write more 
+  elegant and compact code.
+</p>
+<p>
+  So far we've only been working with individual styles applied to individual 
+  tags.  This works, but it is by no means the most efficient way to apply our 
+  styles.  We can collect all our styling rules in one place (a style sheet) and 
+  then apply the style sheet to every single tag on the page... or for
+  that matter, every single tag throughout the entire website.  Let's see how 
+  this works.
+</p>
+
+<h3>Embedded Style Sheets</h3>
+<p>
+  An embedded style sheet affects every tag on the page.  In order to create
+  an embedded style sheet, we need to go to the <code>&lt;head&gt;</code>
+  of the document.  
+  (<a href="../introduction/structure.html">Remember</a> the 
+  <code>&lt;head&gt;</code> tag?)  Let's see an example:
+</p>
+
+<div class="code">
+<h4 class="inline">All Green Paragraphs
+(<code><a href="../examples/irish.txt">source</a></code>)</h4>
+<pre>
+&lt;html&gt;
+&lt;head&gt;
+  &lt;title&gt;When Irish Eyes Are Smiling&lt;/title&gt;
+  <b>&lt;style type="text/css"&gt;
+  &lt;!--
+    p {color: #008000; background: #ffff00}
+  --&gt;
+  &lt;/style&gt;</b>
+&lt;/head&gt;
+&lt;body&gt;
+&lt;p&gt;
+  Here's how the chorus goes:
+&lt;/p&gt;
+&lt;p&gt;
+  When Irish eyes are smiling,&lt;br&gt;
+  Sure, 'tis like the morn in Spring.&lt;br&gt;
+  In the lilt of Irish laughter&lt;br&gt;
+  You can hear the angels sing.&lt;br&gt;
+  When Irish hearts are happy,&lt;br&gt;
+  All the world seems bright and gay.&lt;br&gt;
+  And when Irish eyes are smiling,&lt;br&gt;
+  Sure, they steal your heart away.&lt;br&gt;
+&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</pre>
+</div>
+
+<p>
+  The effect is rather ugly, but it demonstrates how style sheets work:
+</p>
+<div class="results">
+<h4 class="inline">All Green Paragraphs (Results)</h4>
+<p style="color: #008000; background: #ffff00">
+  Here's how the chorus goes:
+</p>
+<p style="color: #008000; background: #ffff00">
+  When Irish eyes are smiling,<br>
+  Sure, 'tis like the morn in Spring.<br>
+  In the lilt of Irish laughter<br>
+  You can hear the angels sing.<br>
+  When Irish hearts are happy,<br>
+  All the world seems bright and gay.<br>
+  And when Irish eyes are smiling,<br>
+  Sure, they steal your heart away.<br>
+</p>
+</div>
+
+<p>
+  The syntax is a <em>little</em> different 
+  from what we are used to, but the core idea (the CSS rule) should look 
+  familiar.  Let's examine the style sheet's components:
+</p>
+<ul>
+  <li>
+    <p>
+      <code>&lt;style type="text/css"&gt;</code>: The 
+      <code>&lt;style&gt;</code> tag
+      indicates the beginning of the style sheet.  It <em>must</em> go
+      between the document's <code>&lt;head&gt;</code> and 
+      <code>&lt;/head&gt;</code> tags.
+    </p>
+    <p>
+      The <code>&lt;style&gt;</code> tag has a <code>type</code> attribute
+      that is <em>required</em> by the specification.  This attribute says 
+      that you are using a <em>CSS</em> style sheet, as opposed to using 
+      some other, yet-to-be-invented style sheet language.
+    </p>
+  </li>
+  <li>
+    <p>
+      <code>&lt;!--</code>: This is an HTML comment.  Some browsers do not
+      understand CSS.  These browsers fall into a couple of categories:
+    </p>
+    <ul>
+      <li>They are old, having been created before the development of the
+        <a href="http://www.w3.org/TR/REC-CSS1">first CSS standard</a>.</li>
+      <li>They are text-only.  These simplified, fast browsers dont bother with
+         styling directives and images -- they serve up only the raw text.</li>
+     </ul>
+     <p>
+       Either way, you have to account for non-CSS browsers.  HTML
+       comments allow you to avoid the unfortunate situation where the
+       browser displays your CSS directives at the top of the page.  This situation
+       might be rare, but regardless, it is still good form to put the comments in.
+     </p>
+  </li>
+  <li> 
+    <p>
+      <code>p</code>:  The CSS <em>selector</em>.  This says, 
+       "do <em>something</em> to all <code>&lt;p&gt;</code> tags."
+    </p>
+  </li>
+  <li>
+    <p>
+      <code>{color: #008000; background: #ffff00}</code>:  The CSS 
+      <em>declarations</em>.  Together with the <em>selector</em> 
+      ("<code>p</code>"), they constitute a CSS rule:  make all paragraphs
+      green text with a bright yellow background.  Note that we have 
+      <em>two</em> declarations; you must separate multiple declarations
+      with a semicolon.
+    </p>
+  </li>
+</ul>
+<p>
+  Now, we could have applied these declarations to the <code>style</code> 
+  attribute of each paragraph, and they would have appeared the 
+  same.  The key difference is that the style sheet affects <em>all</em>
+  paragraphs, not just one.  We specify the rule in <em>one</em> place, and 
+  it works on all tags that match the selector. 
+</p>
+<h4>Multiple CSS Rules</h4>
+<p>
+  You may specify as many rules as you like in a style sheet.  Consider the 
+  following:
+</p>
+<a name="GPRB"></a>
+<div class="code">
+<h4 class="inline">Green Paragraphs, Red Body
+(<code><a href="../examples/irish2.txt">source</a></code>)</h4> 
+<pre>
+&lt;head&gt;
+  &lt;title&gt;When Irish Eyes Are Smiling&lt;/title&gt;
+  &lt;style&gt;
+  &lt;!--
+    <b>body {background: #ff0000}</b>
+    p {color: #008000; background: #ffff00}
+  --&gt;
+  &lt;/style&gt;
+&lt;/head&gt;
+</pre>
+</div>
+<p>
+  Here we've specified that the body of the page should have a red background,
+  while all paragraphs should have a yellow background with green text.
+  The effect is so garish that I am loathe to provide the output on this page;
+  let's move on.
+</p>
+<h3>Style Sheet Cascading</h3>
+<p>
+  What happens when CSS rules conflict?  Here's where the "Cascading" part
+  of Cascading Style Sheets comes in.  The rules are somewhat complicated 
+  (<a href="http://www.w3.org/TR/REC-CSS1#cascading-order" title="official
+  W3C spec on CSS cascading">here they are in all their glory</a>).   But they
+  basically boil down to "whichever CSS rule is 'nearer' or 'more specific' wins."  
+  Let's return to our song lyric example.  Let's say we <em>didn't</em> want 
+  the first paragraph to be in green text: 
+</p>
+<div class="code">
+<h4 class="inline">One Green Paragraph
+(<code><a href="../examples/irish3.txt">source</a></code>)</h4> 
+<pre>
+&lt;html&gt;
+&lt;head&gt;
+  &lt;title&gt;When Irish Eyes Are Smiling&lt;/title&gt;
+  &lt;style&gt;
+  &lt;!--
+    p {color: #008000; background: #ffff00}
+  --&gt;
+  &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;p <b>style="color: #000000"</b>&gt;
+  Here's how the chorus goes:
+&lt;/p&gt;
+&lt;p&gt;
+  When Irish eyes are smiling,&lt;br&gt;
+  Sure, 'tis like the morn in Spring.&lt;br&gt;
+  In the lilt of Irish laughter&lt;br&gt;
+  You can hear the angels sing.&lt;br&gt;
+  When Irish hearts are happy,&lt;br&gt;
+  All the world seems bright and gay.&lt;br&gt;
+  And when Irish eyes are smiling,&lt;br&gt;
+  Sure, they steal your heart away.&lt;br&gt;
+&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</pre>
+</div>
+<p>
+  The first paragraph has black text.  Our <code>style</code> attribute is more
+  specific than the general page-level CSS, and so the black-text rule overrides 
+  the green-text rule..  However, the paragraph still has a yellow background --
+  the yellow-background rule <em>cascades</em> down to this paragraph, 
+  because we didn't specify anything about it.
+</p>
+
+<div class="results">
+<h4 class="inline">One Green Paragraph (Results)</h4>
+<p style="color: #000000; background: #ffff00">
+  Here's how the chorus goes:
+</p>
+<p style="color: #008000; background: #ffff00">
+  When Irish eyes are smiling,<br>
+  Sure, 'tis like the morn in Spring.<br>
+  In the lilt of Irish laughter<br>
+  You can hear the angels sing.<br>
+  When Irish hearts are happy,<br>
+  All the world seems bright and gay.<br>
+  And when Irish eyes are smiling,<br>
+  Sure, they steal your heart away.<br>
+</p>
+</div>
+<h4>Parent-Child Cascading</h4>
+<p>
+  Another important cascading rule is that parent tags apply their style to 
+  their children (enclosed tags).  Rules applied to the 
+  <code>&lt;body&gt;</code> tag <em>cascade down</em> to enclosed 
+  <code>&lt;p&gt;</code> tags.  Rules applied to <code>&lt;p&gt;</code>
+  tags <em>cascade down</em> to enclosed <code>&lt;em&gt;</code> tags.
+  And so on.  In fact, we saw this form of cascading in the 
+  <a href="#GPRB">Green Paragraphs, Red Body</a> example above.
+  The background of the page would be red, and any child elements would 
+  have a red background... except for paragraphs, which override this rule.
+</p>
+<h3>Global Style Sheets</h3>
+<p>
+  What's better than applying styles to an entire page?  Applying it to an entire
+  website.  A <dfn>global style sheet</dfn> is a separate file -- a central 
+  repository of CSS rules that we can apply to multiple pages in a site.   There 
+  are two ways to "call" a global style sheet into a given page:
+</p>
+
+<div class="code">
+<h4 class="inline">The "link" Method</h4>
+<pre>
+&lt;html&gt;
+&lt;head&gt;
+  &lt;title&gt;When Irish Eyes Are Smiling&lt;/title&gt;
+  <b>&lt;link rel="stylesheet" href="/styles/style1.css" 
+             type="text/css"&gt;
+  &lt;link rel="stylesheet" href="/styles/style2.css" 
+             type="text/css"&gt;</b>
+  &lt;style&gt;
+  &lt;!--
+    p {color: #008000; background: #ffff00}
+  --&gt;
+  &lt;/style&gt;
+&lt;/head&gt;
+</pre>
+</div>
+<br>
+
+<div class="code">
+<h4 class="inline">The "@import" Method</h4>
+<pre>
+&lt;html&gt;
+&lt;head&gt;
+  &lt;title&gt;When Irish Eyes Are Smiling&lt;/title&gt;
+  &lt;style&gt;
+  &lt;!--
+    <b>@import url("/styles/styles3.css");
+    @import url("/morestyles/styles4.css");</b>
+    body {background: #ff0000}
+    p {color: #008000; background: #ffff00}
+  --&gt;
+  &lt;/style&gt;
+&lt;/head&gt;
+</pre>
+</div>
+ 
+<p>
+  The two methods have bizarrely different syntax, but functionally they are 
+  about the same.  They both allow you to specify multiple stylesheet files, 
+  and you may use them both in conjunction with an embedded style sheet.  
+  The only major difference is that the "@import" method is not supported in
+  some older browsers, such as Netscape 4.  (This is actually an advantage, 
+  because often you'll <em>want</em> to hide styles from Netscape 4.)
+</p>
+<p>
+  In the next section, we'll explore style sheets further and learn finer control 
+  over CSS selectors.
+</p>
+
+<div id="next">
+  
+Next: <a href="classesids.html">Classes and IDs</a>
+  
+</div>
+		</div><!-- End content -->
+	</div><!-- End main content wrapper -->
+	
+	<div class="clearer"></div>
+	
+	<div id="footer"><!-- Start Footer -->
+		<div id="breadcrumbcontainer"><!-- Start the breadcrumb wrapper -->
+			<ul><li><a href="../../index.html">Home</a>&nbsp;>&nbsp;</li><li><a href="../../tutorial/index.html">Tutorial</a>&nbsp;>&nbsp;</li><li><a href="../../tutorial/intermediate/index.html">Intermediate</a>&nbsp;>&nbsp;</li><li><a href="stylesheets.html">Style Sheets</a>&nbsp;>&nbsp;</li></ul>
+		</div><!-- End breadcrumb -->
+		<p>Copyright &copy; 2009 Ross Nelson</p>
+	</div><!-- End Footer -->
+
+</div><!-- End container -->
+</body>
+</html>

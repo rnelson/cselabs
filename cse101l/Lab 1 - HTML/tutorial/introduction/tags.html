@@ -1,0 +1,203 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+		<meta name="robots" content="all" />
+		<meta name="generator" content="RapidWeaver" />
+		
+		<title>HTML Tutorial - Introduction - Tags</title>
+		<link rel="stylesheet" type="text/css" media="screen" href="../../rw_common/themes/interslice/styles.css"  />
+		<link rel="stylesheet" type="text/css" media="print" href="../../rw_common/themes/interslice/print.css"  />
+		<link rel="stylesheet" type="text/css" media="handheld" href="../../rw_common/themes/interslice/handheld.css"  />
+		<link rel="stylesheet" type="text/css" media="screen" href="../../rw_common/themes/interslice/css/width/width_default.css" />
+		<link rel="stylesheet" type="text/css" media="screen" href="../../rw_common/themes/interslice/css/sidebar/sidebar_left.css" />
+		
+		
+		
+		
+		<script type="text/javascript" src="../../rw_common/themes/interslice/javascript.js"></script>
+		
+		
+		<link rel="stylesheet" href="../../tutorial.css" type="text/css">
+	</head>
+<body>
+<div id="container"><!-- Start container -->
+	
+	<div id="pageHeader"><!-- Start page header -->
+		
+		<h1>HTML Tutorial</h1>
+		<h2></h2>
+	</div><!-- End page header -->
+	
+	<div id="sidebarContainer"><!-- Start Sidebar wrapper -->
+		<div id="navcontainer"><!-- Start Navigation -->
+			<ul><li><a href="../../index.html" rel="self">Home</a></li><li><a href="../../tutorial/index.html" rel="self" class="currentAncestor">Tutorial</a><ul><li><a href="../../tutorial/background/index.html" rel="self">Background</a></li><li><a href="../../tutorial/introduction/index.html" rel="self" class="currentAncestor">Introduction</a><ul><li><a href="../../tutorial/introduction/divingin.html" rel="self">Diving In</a></li><li><a href="../../tutorial/introduction/structure.html" rel="self">Structure</a></li><li><a href="../../tutorial/introduction/tinkering.html" rel="self">Tinkering</a></li><li><a href="tags.html" rel="self" id="current">Tags</a></li><li><a href="../../tutorial/introduction/attributes.html" rel="self">Attributes</a></li><li><a href="../../tutorial/introduction/browsertools.html" rel="self">Browser Tools</a></li></ul></li><li><a href="../../tutorial/basic/index.html" rel="self">Basic</a></li><li><a href="../../tutorial/intermediate/index.html" rel="self">Intermediate</a></li><li><a href="../../tutorial/advanced/index.html" rel="self">Advanced</a></li></ul></li><li><a href="../../license.html" rel="self">License</a></li><li><a href="../../about.html" rel="self">About</a></li></ul>
+		</div><!-- End navigation --> 
+		<div id="sidebar"><!-- Start sidebar content -->
+			<h1 class="sideHeader"></h1><!-- Sidebar header -->
+			 <br /><!-- sidebar content you enter in the page inspector -->
+			 <!-- sidebar content such as the blog archive links -->
+		</div><!-- End sidebar content -->
+	</div><!-- End sidebar wrapper -->
+	
+	<div id="contentContainer"><!-- Start main content wrapper -->
+		<div id="content"><!-- Start content -->
+			<h2>Tags</h2>
+
+<p>
+  After all this experimenting with our 
+  <a href="../examples/simple.txt">example
+  webpage</a>, it's time to define things a little more formally.
+</p>
+
+<h3>Tag Components</h3>
+
+<p>Tags have three main components:</p>
+
+<ul>
+  <li><span style="font-weight: bold; color: #090">tagname</span>: Identifies the type of the tag.</li>
+  <li><span style="font-weight: bold; color: #900">attribute</span>: Allows one type of tag to
+  produce different effects.</li>
+  <li><span style="font-weight: bold; color: #009">value</span>: Allows particular attributes to 
+  vary.</li>
+</ul>
+
+<div><code>
+&lt;<span  style="font-weight: bold; color: #090">tagname</span> <span
+ style="font-weight: bold; color: #900">attribute1</span>="<span  style="font-weight: bold; color: #009">value1</span>"
+<span style="font-weight: bold; color: #900">attribute2</span>="<span style="font-weight: bold; color: #009">value2</span>"...&gt;<br>
+ ...(text or more tags go here)...<br>
+ &lt;<span style="font-weight: bold; color: #090">/tagname</span>&gt;<br>
+</code></div>
+
+<p>
+  Some tags do not require a closing tag or attributes to
+  work properly:
+</p>
+<ul>
+  <li><p>The <code>&lt;br&gt;</code> tag (which we'll discuss in the <a href="../basic/paragraphbreaks.html">Paragraph Breaks</a> section) creates a line break.  It doesn't require a closing tag; it stands alone.</p></li>
+  <li><p>In the <a href="structure.html">previous section</a>, the 
+example <code><a href="../examples/background.txt">background.html</a></code> displayed the <code>&lt;body&gt;</code> tag with an attribute,
+<code>style</code>. However, the <code>&lt;body&gt;</code> tag
+works just fine without the <code>style</code> attribute.</p></li>
+</ul>
+
+<div class="code">
+<h4 class="inline">Background Color
+(<code><a href="../examples/background.txt">source</a></code>)</h4> 
+<pre>
+&lt;<span style="font-weight: bold; color: #090">body</span> <span
+ style="font-weight: bold; color: #900">style</span>="<span  style="font-weight: bold; color: #009">background-color: yellow</span>"&gt;
+</pre>
+</div>
+
+<p>
+  We'll discuss attributes in the <a href="attributes.html">next section</a>. 
+  For now, let's focus on simple tags.
+</p>
+
+<h3>UPPER CASE, lower case</h3>
+<p>
+  <b>Case is irrelevant</b> for tags. Some people prefer all upper case,
+  so that when they look at their HTML source, it's easier to differentiate 
+  tags and text.  I personally prefer all lower case, because I find it easier to 
+  type the tags that way. Either way, it's just a particular style choice.
+  <code>&lt;BODY&gt;</code>, <code>&lt;body&gt;</code>, and even
+  <code>&lt;bODy&gt;</code> are all the same tag.
+</p>
+
+<h3>Misspellings and Misunderstandings</h3>
+
+<p>
+  Vastly simplified, a browser processes an HTML page something
+  like this:
+</p>
+<ol>
+  <li>Identify anything that is between angle brackets
+  (<code>&lt;&nbsp;&gt;</code>) as a "tag"</li>
+  <li>Determine whether the browser has any instructions for using
+  the tag: 
+  <ul>
+    <li>If yes, the tag is real -- follow the instructions</li>
+    <li>If no, the tag is garbage -- ignore it</li>
+  </ul>
+  </li>
+</ol>
+
+<p>
+  When a browser ignores a tag, that means one of two things:
+</p>
+<ol>
+  <li>The tag is misspelled or does not exist. (<code>&lt;mxyzptlk&gt;</code>, for example, is not an HTML tag.)</li>
+  <li>The tag is legal, but that particular browser does not support it.</li>
+</ol>
+<p>
+  An example of #2 is the <code>&lt;blink&gt;</code> tag. This tag
+  works in Mozilla and in nearly all versions of Netscape Navigator. Internet
+  Explorer and many other browsers do not support it.
+</p>
+
+<div class="code">
+<h4 class="inline">Blinking Text
+(<code><a href="../examples/blink.txt">source</a></code>)</h4> 
+<pre>
+Warning: &lt;blink&gt;For external use only&lt;/blink&gt;. 
+Avoid contact with eyes.
+</pre>
+</div>
+<br>
+<div class="caution">
+<h4 class="inline">Warning: The Blink Tag</h4>
+<p>
+  Most people find the <code>&lt;blink&gt;</code>
+  tag distracting and irritating.  In fact, I am aware of only <em>one 
+  example</em> of a <a href="http://www.negativland.com/albini.html"
+  title="Rant about the music industry.  Warning: slightly profane.">good use of
+  the blink tag</a> on the <em>entire</em> World Wide Web.  Well, maybe
+  <a href="http://www.art.net/~hopkins/Don/unix-haters/login.html" 
+  title="From the Unix-hater's Handbook">two</a>.
+</p>
+</div>
+
+<p>
+  If you are using any version of Netscape Navigator 
+  (other than version 6, I think), the text in the <b>Results</b> box below 
+  should be blinking. If you are using Internet Explorer, the text will not be
+  blinking.  This is actually a very common situation when using HTML: 
+  one browser will support a particular aspect of HTML, while another doesn't...
+  or worse, supports it incorrectly.  
+</p>
+<p>
+  Fortunately in the case of the <code>&lt;blink&gt;</code> tag, this is no 
+  great loss.
+</p>
+
+<div class="results">
+<h4 class="inline">Blink Tag (Results)</h4>
+<br>
+<br>
+Warning: <blink>For external use only</blink>. Avoid contact with eyes.<br>
+<br>
+</div>
+
+
+<div id="next">
+  
+Next: <a href="attributes.html">Attributes</a>
+  
+</div>
+		</div><!-- End content -->
+	</div><!-- End main content wrapper -->
+	
+	<div class="clearer"></div>
+	
+	<div id="footer"><!-- Start Footer -->
+		<div id="breadcrumbcontainer"><!-- Start the breadcrumb wrapper -->
+			<ul><li><a href="../../index.html">Home</a>&nbsp;>&nbsp;</li><li><a href="../../tutorial/index.html">Tutorial</a>&nbsp;>&nbsp;</li><li><a href="../../tutorial/introduction/index.html">Introduction</a>&nbsp;>&nbsp;</li><li><a href="tags.html">Tags</a>&nbsp;>&nbsp;</li></ul>
+		</div><!-- End breadcrumb -->
+		<p>Copyright &copy; 2009 Ross Nelson</p>
+	</div><!-- End Footer -->
+
+</div><!-- End container -->
+</body>
+</html>

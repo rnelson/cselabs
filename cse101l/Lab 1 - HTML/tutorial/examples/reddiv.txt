@@ -1,0 +1,31 @@
+<html>
+<!-- 
+  Copyright Evan Goer, Feb 2003.
+  You may freely copy, share, and modify this file for non-profit, 
+  educational purposes only.  
+-->
+<head>
+  <title>Important Paragraphs</title>
+  <style type="text/css">
+  <!--
+    div.important {color: #ff0000}
+  -->
+  </style>
+</head>
+<body>
+<p>
+  Paragraph 1.
+</p>
+<div class="important">
+<p>
+  Paragraph 2!
+</p>
+<p>
+  Paragraph 3!!
+</p>
+</div>
+<p>
+  Paragraph 4.
+</p>
+</body>
+</html>

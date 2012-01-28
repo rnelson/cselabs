@@ -1,0 +1,37 @@
+<html>
+<!-- 
+  Copyright Evan Goer, Feb 2003.
+  You may freely copy, share, and modify this file for non-profit, 
+  educational purposes only.  
+-->
+<head>
+  <title>Non-uniform Padding</title>
+  <style type="text/css">
+  <!--
+    div.unpadded {
+      border: 3px solid;
+      background: #ccccff;
+    }
+
+    div.padded { 
+      border: 3px solid;
+      padding-top: 10px;
+      padding-bottom: 10px;
+      padding-left: 5em;
+      padding-right: 0px;
+      background: #ccccff;
+    }
+  -->
+  </style>
+</head>
+<body>
+<div class="unpadded">
+  No padding
+</div>
+<br>
+<div class="padded">
+  Top: 10px; bottom: 0px<br>
+  Left: 5em; right: 0px
+</div>
+</body>
+</html>

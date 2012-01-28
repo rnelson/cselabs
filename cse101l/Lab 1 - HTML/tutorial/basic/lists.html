@@ -1,0 +1,231 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+		<meta name="robots" content="all" />
+		<meta name="generator" content="RapidWeaver" />
+		
+		<title>HTML Tutorial - Basic - Lists</title>
+		<link rel="stylesheet" type="text/css" media="screen" href="../../rw_common/themes/interslice/styles.css"  />
+		<link rel="stylesheet" type="text/css" media="print" href="../../rw_common/themes/interslice/print.css"  />
+		<link rel="stylesheet" type="text/css" media="handheld" href="../../rw_common/themes/interslice/handheld.css"  />
+		<link rel="stylesheet" type="text/css" media="screen" href="../../rw_common/themes/interslice/css/width/width_default.css" />
+		<link rel="stylesheet" type="text/css" media="screen" href="../../rw_common/themes/interslice/css/sidebar/sidebar_left.css" />
+		
+		
+		
+		
+		<script type="text/javascript" src="../../rw_common/themes/interslice/javascript.js"></script>
+		
+		
+		<link rel="stylesheet" href="../../tutorial.css" type="text/css">
+	</head>
+<body>
+<div id="container"><!-- Start container -->
+	
+	<div id="pageHeader"><!-- Start page header -->
+		
+		<h1>HTML Tutorial</h1>
+		<h2></h2>
+	</div><!-- End page header -->
+	
+	<div id="sidebarContainer"><!-- Start Sidebar wrapper -->
+		<div id="navcontainer"><!-- Start Navigation -->
+			<ul><li><a href="../../index.html" rel="self">Home</a></li><li><a href="../../tutorial/index.html" rel="self" class="currentAncestor">Tutorial</a><ul><li><a href="../../tutorial/background/index.html" rel="self">Background</a></li><li><a href="../../tutorial/introduction/index.html" rel="self">Introduction</a></li><li><a href="../../tutorial/basic/index.html" rel="self" class="currentAncestor">Basic</a><ul><li><a href="../../tutorial/basic/paragraphbreaks.html" rel="self">Paragraph Breaks</a></li><li><a href="../../tutorial/basic/headings.html" rel="self">Headings</a></li><li><a href="../../tutorial/basic/fontstyles.html" rel="self">Font Styles</a></li><li><a href="../../tutorial/basic/colors.html" rel="self">Colors</a></li><li><a href="../../tutorial/basic/links.html" rel="self">Links</a></li><li><a href="../../tutorial/basic/images.html" rel="self">Images</a></li><li><a href="lists.html" rel="self" id="current">Lists</a></li></ul></li><li><a href="../../tutorial/intermediate/index.html" rel="self">Intermediate</a></li><li><a href="../../tutorial/advanced/index.html" rel="self">Advanced</a></li></ul></li><li><a href="../../license.html" rel="self">License</a></li><li><a href="../../about.html" rel="self">About</a></li></ul>
+		</div><!-- End navigation --> 
+		<div id="sidebar"><!-- Start sidebar content -->
+			<h1 class="sideHeader"></h1><!-- Sidebar header -->
+			 <br /><!-- sidebar content you enter in the page inspector -->
+			 <!-- sidebar content such as the blog archive links -->
+		</div><!-- End sidebar content -->
+	</div><!-- End sidebar wrapper -->
+	
+	<div id="contentContainer"><!-- Start main content wrapper -->
+		<div id="content"><!-- Start content -->
+			<h2>Lists</h2>
+
+<p>
+    HTML provides several ways to display lists of information:
+</p>
+<ul>
+  <li><b>unordered lists</b> (bulleted lists -- like this one)</li>
+  <li><b>ordered lists</b> (numbered lists, procedures, formal outlines)</li>
+  <li><b>definition lists</b> (a list of terms with definitions)</li>
+</ul>
+<p>
+  Lists are different from anything we've covered in the 
+  <a href="../introduction/index.html">Introduction</a> or 
+  <a href="../basic/index.html">Basic</a> sections, because generating a list 
+  requires at least two tags working together.
+</p>
+<h3>Ordered Lists</h3>
+<p>
+  Ordered lists start and end with a <code>&lt;ol&gt;</code> tag.  Within
+  the <code>&lt;ol&gt;</code> and <code>&lt;/ol&gt;</code>, each list
+  item is defined by an <code>&lt;li&gt;</code> tag, as follows:
+</p>
+<div class="code">
+<h4 class="inline">Ordered List
+(<code><a href="../examples/ol.txt">source</a></code>)</h4>
+<pre>
+&lt;h3&gt;My Dot-com Business Plan&lt;/h3&gt;
+&lt;ol&gt;
+  &lt;li&gt;Buy domain name&lt;/li&gt;
+  &lt;li&gt;Put up website&lt;/li&gt;
+  &lt;li&gt;???&lt;/li&gt;
+  &lt;li&gt;Profit!!&lt;/li&gt;
+&lt;/ol&gt;
+</pre>
+</div>
+<p>
+  The result is an automatically numbered and indented list. 
+</p>
+<div class="results">
+<h4 class="inline">Ordered List (Results)</h4>
+<h3 style="text-indent: 0px">My Dot-com Business Plan</h3>
+<ol>
+  <li>Buy domain name</li>
+  <li>Put up website</li>
+  <li>???</li>
+  <li>Profit!!</li>
+</ol>
+</div>
+<p>
+  The default ordered list uses arabic numerals (1, 2, 3, ...).  However, you 
+  can alter this behavior fairly easily.  Furthermore,
+  between the <code>&lt;li&gt;</code> and <code>&lt;/li&gt;</code> tags 
+  you may place nearly any HTML content that you want:  text, paragraphs,
+  images, even another HTML list.
+</p>
+<div class="code">
+<h4 class="inline">Nested Ordered List
+(<code><a href="../examples/olnested.txt">source</a></code>)</h4>
+<pre>
+&lt;h3&gt;Schedule for Monday&lt;/h3&gt;
+&lt;ol style="list-style-type: upper-roman"&gt;
+  &lt;li&gt;Suppress Gaul
+    &lt;ol style="list-style-type: upper-alpha"&gt;
+      &lt;li&gt;Two more legions or three?&lt;/li&gt;
+      &lt;li&gt;Where to put victory arch?  Forum's 
+        looking crowded...&lt;/li&gt;
+    &lt;/ol&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Have Cicero killed&lt;/li&gt;
+  &lt;li&gt;Lunch&lt;/li&gt;
+  &lt;li&gt;Head-and-hands-on-pike viewing at
+    the Forum (casual dress ok?)&lt;/li&gt;
+&lt;/ol&gt;
+</pre>
+</div>
+<p>
+  We've specified a <em>nested</em> list.  The outer list will use 
+  upper-case Roman numerals, and the inner list will start counting
+  independently, using upper-case letters.  
+</p>
+<div class="results">
+<h4 class="inline">Nested Ordered List (Results)</h4>
+<h3 style="text-indent: 0px">Schedule for Monday</h3>
+<ol style="list-style-type: upper-roman">
+  <li>Suppress Gaul
+    <ol style="list-style-type: upper-alpha">
+      <li>Two more legions or three?</li>
+      <li>Where to put victory arch?  Forum's 
+        looking crowded...</li>
+    </ol>
+  </li>
+  <li>Have Cicero killed</li>
+  <li>Lunch</li>
+  <li>Head-and-hands-on-pike viewing at 
+    the Forum (casual dress ok?)</li>
+</ol>
+</div>
+
+<p>
+  There are a large number of available <code>list-style-type</code>s for
+  ordered lists.  The most common and well-supported values are 
+  <code>upper-roman</code>, <code>lower-roman</code>, 
+  <code>upper-alpha</code>, <code>lower-alpha</code>, and the default,
+  <code>decimal</code>.  Of course the official 
+  <a href="http://www.w3.org/TR/REC-CSS2/generate.html#lists" 
+  title="W3C specification for CSS2 lists">specification</a> provides many
+  more options, such as <code>hebrew</code>, <code>georgian</code>,
+  and <code>hiragana-iroha</code>.  Unfortunately, many browsers don't
+  support the more obscure values.  In fact, even the common values
+  arent supported by the oldest browsers, but that's OK: the browser will 
+  just fall back to the default (decimal numbers).
+</p>
+<h3>Unordered Lists</h3>
+<p>
+  Unordered lists are similar to ordered lists, except that they do not proceed
+  in sequence.  Unordered lists even recycle the <code>&lt;li&gt;</code> 
+  tag, which makes it very easy to turn an ordered list into an unordered
+  list, and vice-versa.  All you need do is turn your <code>&lt;ol&gt;</code>
+  tags into <code>&lt;ul&gt;</code> tags:
+</p>
+<div class="code">
+<h4 class="inline">Unordered List
+(<code><a href="../examples/ul.txt">source</a></code>)</h4>
+<pre>
+&lt;h3&gt;My Dot-com Business Plan&lt;/h3&gt;
+&lt;ul style="list-style-type: square; color: #009900"&gt;
+  &lt;li&gt;Buy domain name&lt;/li&gt;
+  &lt;li&gt;Put up website&lt;/li&gt;
+  &lt;li style="list-style-type: disc; color: #ff0000"&gt;???&lt;/li&gt;
+  &lt;li&gt;Profit!!&lt;/li&gt;
+&lt;/ul&gt;
+</pre>
+</div>
+<p>
+  In the parent tag (<code>&lt;ul&gt;</code>) we've specified that the list 
+  should be green and that the bullets should be squares.  We've overridden 
+  this behavior in the third bullet point, specifying a red, circular bullet.  Notice
+  how the stylesheet behavior <em>cascades</em> from the parent tag to 
+  the child tags -- all the bullets take on the characteristics of the parent, 
+  unless we specify otherwise.
+</p>
+<div class="results">
+<h4 class="inline">Unordered List (Results)</h4>
+<h3 style="text-indent: 0px">My Dot-com Business Plan</h3>
+<ul style="list-style-type: square; color: #009900">
+  <li>Buy domain name</li>
+  <li>Put up website</li>
+  <li style="list-style-type: disc; color: #ff0000">???</li>
+  <li>Profit!!</li>
+</ul>
+</div>
+
+<div class="exercise">
+<h4 class="inline">Exercise 5</h4>
+<p>
+  Save <code>links.html</code> as <code>list.html</code>.
+</p>
+<p>
+  Place your links into multiple lists. Each group should
+  be its own list. Rather than having <a href="headings.html">headings</a>
+  for each group, use nested lists.
+</p>
+<p>
+  The lists can be ordered or unordered.
+</p>
+</div>
+
+<div id="next">
+  
+Next: <a href="../intermediate/index.html">Intermediate</a>
+  
+</div>
+		</div><!-- End content -->
+	</div><!-- End main content wrapper -->
+	
+	<div class="clearer"></div>
+	
+	<div id="footer"><!-- Start Footer -->
+		<div id="breadcrumbcontainer"><!-- Start the breadcrumb wrapper -->
+			<ul><li><a href="../../index.html">Home</a>&nbsp;>&nbsp;</li><li><a href="../../tutorial/index.html">Tutorial</a>&nbsp;>&nbsp;</li><li><a href="../../tutorial/basic/index.html">Basic</a>&nbsp;>&nbsp;</li><li><a href="lists.html">Lists</a>&nbsp;>&nbsp;</li></ul>
+		</div><!-- End breadcrumb -->
+		<p>Copyright &copy; 2009 Ross Nelson</p>
+	</div><!-- End Footer -->
+
+</div><!-- End container -->
+</body>
+</html>

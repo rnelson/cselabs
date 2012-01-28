@@ -1,0 +1,60 @@
+﻿body {
+	font-family:"Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+	color: black;
+	background-color: white;
+}
+
+.hide {
+	display: none;
+	width: 0;
+	height: 0;
+}
+
+#createdBy {
+	font-size: small;
+	margin-bottom: 30px;
+}
+
+#searchTerms {
+	font-style: italic;
+	color: red;
+}
+
+.results-count {
+	font-size: small;
+}
+
+.result {
+	width: 500px;
+	margin-bottom: 20px;
+}
+
+.result-title {
+	font-weight: bold;
+}
+
+.result-content {
+	margin-left: 5px;
+}
+
+.result-text {
+	margin-bottom: 5px;
+}
+
+.result-urls {
+	font-size: small;
+}
+
+.result-url a, .result-url a:active, .result-url a:hover {
+	color: blue;
+}
+
+.result-url a:visited {
+	color: gray;
+}
+
+.tinytext, .tinytext a, .tinytext a:active, .tinytext a:hover, .tinytext a:visited {
+	font-size: xx-small;
+	color: green;
+}
+

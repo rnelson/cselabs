@@ -1,0 +1,54 @@
+<html>
+<!-- 
+  Copyright Evan Goer, Feb 2003.
+  You may freely copy, share, and modify this file for non-profit, 
+  educational purposes only.  
+-->
+<head>
+  <title>Shorthand Padding</title>
+  <style type="text/css">
+  <!--
+    div {
+      border: 3px solid;
+    }
+    
+    div.one {
+      padding: 20px;
+      background: #ccccff;
+    }
+    
+    div.two {
+      padding: 20px 40px;
+      background: #ffffcc;
+    }
+    
+    div.three {
+      padding: 20px 40px 10px;
+      background: #ffcccc;
+    }
+    
+    div.four {
+      padding: 20px 40px 10px 30px;
+      background: #ccffcc;
+    }
+  -->
+  </style>
+</head>
+<body>
+<div class="one">
+   padding: 20px (all)
+</div>
+<br>
+<div class="two">
+   padding: 20px 40px (top/bottom, right/left)
+</div>
+<br>
+<div class="three">
+   padding: 20px 40px 10px (top, right/left, bottom)
+</div>
+<br>
+<div class="four">
+   padding: 20px 40px 10px 30px (top, right, bottom, left)
+</div>
+</body>
+</html>

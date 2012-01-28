@@ -1,0 +1,446 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+		<meta name="robots" content="all" />
+		<meta name="generator" content="RapidWeaver" />
+		
+		<title>HTML Tutorial - Intermediate - Font Control</title>
+		<link rel="stylesheet" type="text/css" media="screen" href="../../rw_common/themes/interslice/styles.css"  />
+		<link rel="stylesheet" type="text/css" media="print" href="../../rw_common/themes/interslice/print.css"  />
+		<link rel="stylesheet" type="text/css" media="handheld" href="../../rw_common/themes/interslice/handheld.css"  />
+		<link rel="stylesheet" type="text/css" media="screen" href="../../rw_common/themes/interslice/css/width/width_default.css" />
+		<link rel="stylesheet" type="text/css" media="screen" href="../../rw_common/themes/interslice/css/sidebar/sidebar_left.css" />
+		
+		
+		
+		
+		<script type="text/javascript" src="../../rw_common/themes/interslice/javascript.js"></script>
+		
+		
+		<link rel="stylesheet" href="../../tutorial.css" type="text/css">
+	</head>
+<body>
+<div id="container"><!-- Start container -->
+	
+	<div id="pageHeader"><!-- Start page header -->
+		
+		<h1>HTML Tutorial</h1>
+		<h2></h2>
+	</div><!-- End page header -->
+	
+	<div id="sidebarContainer"><!-- Start Sidebar wrapper -->
+		<div id="navcontainer"><!-- Start Navigation -->
+			<ul><li><a href="../../index.html" rel="self">Home</a></li><li><a href="../../tutorial/index.html" rel="self" class="currentAncestor">Tutorial</a><ul><li><a href="../../tutorial/background/index.html" rel="self">Background</a></li><li><a href="../../tutorial/introduction/index.html" rel="self">Introduction</a></li><li><a href="../../tutorial/basic/index.html" rel="self">Basic</a></li><li><a href="../../tutorial/intermediate/index.html" rel="self" class="currentAncestor">Intermediate</a><ul><li><a href="../../tutorial/intermediate/stylesheets.html" rel="self">Style Sheets</a></li><li><a href="../../tutorial/intermediate/classesids.html" rel="self">Classes and IDs</a></li><li><a href="../../tutorial/intermediate/divspan.html" rel="self">Div and Span</a></li><li><a href="fontcontrol.html" rel="self" id="current">Font Control</a></li><li><a href="../../tutorial/intermediate/borders.html" rel="self">Borders</a></li><li><a href="../../tutorial/intermediate/marginspadding.html" rel="self">Margins and Padding</a></li><li><a href="../../tutorial/intermediate/alignindent.html" rel="self">Align and Indent</a></li></ul></li><li><a href="../../tutorial/advanced/index.html" rel="self">Advanced</a></li></ul></li><li><a href="../../license.html" rel="self">License</a></li><li><a href="../../about.html" rel="self">About</a></li></ul>
+		</div><!-- End navigation --> 
+		<div id="sidebar"><!-- Start sidebar content -->
+			<h1 class="sideHeader"></h1><!-- Sidebar header -->
+			 <br /><!-- sidebar content you enter in the page inspector -->
+			 <!-- sidebar content such as the blog archive links -->
+		</div><!-- End sidebar content -->
+	</div><!-- End sidebar wrapper -->
+	
+	<div id="contentContainer"><!-- Start main content wrapper -->
+		<div id="content"><!-- Start content -->
+			<h2>Font Control</h2>
+
+<p>
+  In our earlier section on <a href="../basic/fontstyles.html"
+  title="Physical and logical font styles">font styles</a>, we looked at the 
+  effects of the <code>&lt;b&gt;</code> tag and <code>&lt;i&gt;</code>
+  tag on text.  However, these tags are crude instruments at best.  Now that 
+  we've covered the basics of style sheets, it's time to tackle more 
+  sophisticated methods of font control.  
+</p>
+<p>
+  <acronym title="Cascading Style Sheets">CSS</acronym> font 
+  control is divided into <b>three main components</b>:
+</p>
+<ul>
+  <li><code>font-family</code></li>
+  <li><code>font-size</code></li>
+  <li><code>font-styling</code></li>
+</ul>
+<p>
+  We'll tackle each of these properties one-at-a-time.
+</p>
+<h3>The font-family Property</h3>
+<p>
+  The <code>font-family</code> property selects the basic 
+  font face.  As long as you know the name of the font you wish to use, this 
+  component is pretty straightforward:
+</p>
+<div class="code">
+<h4 class="inline">Example: font-family</h4>
+<pre>
+font-family: "Times New Roman"
+</pre>
+</div>
+<p>
+  I've used 
+  "<span style="font-family: 'Times New Roman'">Times New Roman</span>" 
+  in this example not because it's a great font to use on the web (it isn't), but 
+  because it should be familiar to anyone who uses a word processor on a 
+  regular basis.  Note that we must enclose the name of the font in quotes 
+  because of the spaces in "Times New Roman".  Quotes are not necessary for 
+  one-word font names, such as 
+  "<span style="font-family: Garamond">Garamond</span>". 
+</p>
+<h4>Specifying Multiple Fonts</h4>
+<p>
+  One of the unavoidable issues of web design is that you can't count on any 
+  particular browser rendering your page exactly the way you want it to be.  
+  Fonts are no exception.  You might <em>want</em> your text to render in the 
+  cute "<span style="font-family: comic sans ms'">Comic Sans MS</span>" font,
+  but what if your reader's browser doesn't have Comic Sans MS available?
+  There is a small set of fonts that you can count on to <em>usually</em> be 
+  available, such as <span style="font-family: arial">Arial</span>,
+  <span style="font-family: helvetica">Helvetica</span> and 
+  <span style="font-family: times new roman">Times New Roman</span>,
+  but the selection is rather impoverished.  Furthermore, some of these
+  "canonical" fonts are ill-suited for reading on a computer screen.  As 
+  accessibility expert Joe Clark says in 
+  <cite><a href="http://www.joeclark.org/book/" 
+  title="Excellent read.  Pick up a copy post-haste.">Building 
+  Accessible Websites</a></cite>:
+</p>
+<blockquote>
+<p>
+  "Don't use Helvetica. Typographic neophytes think Helvetica is "legible."
+  Try running a few tests with confusable characters like Il1i!&iexcl;|, 0OQ, aeso, 
+  S568, or quotation marks. Related <em>grotesk</em> typefaces like Univers 
+  suffer similarly. (One more time: Don't use Arial. It's a bastardized variant of 
+  Helvetica, it's ugly, it bespeaks unsophistication, and it sticks you with all the 
+  same confusable characters as other <em>grotesks</em>.)"
+</p>
+</blockquote>
+<p>
+  Fortunately <code>font-family</code> allows 
+  you to specify <em>multiple</em> font faces.  Here's an example:
+</p>
+<div class="code">
+<h4 class="inline">Multiple Serif Fonts</h4>
+<pre>
+font-family: Georgia, Palatino, "Trebuchet MS", serif
+</pre>
+</div>
+<p>
+  Here we have provided a list of fonts in descending order of importance.
+  The reader's browser will first try to display the font 
+  <span style="font-family: Georgia">Georgia</span>.  If Georgia is not 
+  available, it will try <span style="font-family: Palatino">Palatino</span>;
+  failing that, <span style="font-family: 'Trebuchet MS'">Trebuchet MS</span>;
+  and if all hope is lost, <span style="font-family: serif">serif</span>.
+</p>
+
+<h4>Generic Fonts</h4>
+<p>
+  There are five varieties of <em>generic fonts</em>.  These are fonts of last
+  resort -- to be used if none of the fonts you name in your list are available.
+</p>
+<ul>
+  <li><p><code>sans-serif</code>:  a font without decoration or flaring at the
+  end of each stroke.  Examples include 
+  <span style="font-family: Verdana">Verdana</span>, 
+  <span style="font-family: Arial">Arial</span>, and
+  <span style="font-family: Geneva">Geneva</span>.
+  </p></li>
+  <li><p><code>serif</code>:  a font that has decoration or flaring at the
+  end of some of its strokes.  Examples include 
+  <span style="font-family: 'Times New Roman'">Times New Roman</span>, 
+  <span style="font-family: Garamond">Garamond</span>, and 
+  <span style="font-family: Georgia">Georgia</span>.
+  </p></li>
+  <li><p><code>monospace</code>:  a font that has the same fixed-width
+  for each character.  Often used to represent computer code or terminal text.
+  Examples include 
+  <span style="font-family: Courier">Courier</span>, 
+  <span style="font-family: Monaco">Monaco</span>, and 
+  <span style="font-family: 'Andale Mono'">Andale Mono</span>.
+  </p></li>
+  <li><p><code>cursive</code>:  a font that is designed to mimic cursive 
+  handwriting.  Examples include 
+  <span style="font-family: 'Brush Script MT'">Brush Script MT</span>, 
+  <span style="font-family: 'Aristocrat LET'">Aristocrat LET</span>, and 
+  <span style="font-family: 'Apple Chancery'">Apple Chancery</span>.
+  </p></li>
+  <li><p><code>fantasy</code>:  a font that is highly decorative (while still 
+  representing recognizable characters). 
+  Examples include 
+  <span style="font-family: Herculanum">Herculanum</span> and
+  <span style="font-family: 'Comic Sans MS'">Comic Sans MS</span>.
+  </p></li>
+</ul>
+
+<h3>The font-size Property</h3>
+<div class="caution">
+  <h4 class="inline">Caution: Font Size</h4>
+  Always keep in mind that people can and will override your font size settings. 
+  Most browsers provide a text-zoom function, and people with weak eyesight 
+  (think, "people over thirty") are quick to make use of it.  
+</div>
+<p>
+  With the <code>font-size</code> property, you can specify your font size
+  in a number of absolute and relative ways:
+</p>
+<dl>
+  <dt>points ("<code>font-size: 12pt</code>")</dt>
+  <dd>Measured in "points" (units of 1/72 of an inch).</dd>
+  <dt>pixels ("<code>font-size: 14px</code>")</dt> 
+  <dd>Measured in screen pixels.</dd>
+  <dt>points ("<code>font-size: 150%</code>")</dt>
+  <dd>Measured relative to the default font or the parent element's font.  A font size of "<code>75%</code>" would shrink the font by a factor of 3/4.</dd>
+<dt>em-widths ("<code>1.2em</code>")</dt> 
+  <dd>Measured relative to the default font or the parent element's font.  The value "<code>1.0em</code>" would be the same as multiplying by one.</dd>
+  <dt>absolute keywords ("<code>x-large</code>")</dt> 
+  <dd>Specifies one of seven sizes: <code>xx-small</code>, <code>x-small</code>, <code>small</code>, <code>medium</code>, <code>large</code>, <code>x-large</code>, and <code>xx-large</code>.  The exact interpretation of what constitutes "medium" or "x-large" varies from browser to browser.</dd>
+  <dt>relative keywords ("<code>larger</code>")</dt> 
+  <dd>Bumps the font up one size or down one size from its default or inherited size.  The options are <code>larger</code> and <code>smaller</code>.</dd>
+</dl>
+<p>
+  Modern browsers handle these ways of specifying the font size reasonably well, 
+  although there are some inconsistencies (such as Internet Explorer's 
+  implementation of the size keywords versus Mozilla/Netscape's).  In older 
+  browsers, consistency is spotty at best.  
+</p>
+
+<h3>Additional font-styling</h3>
+<p>
+  We can further alter the font by making it <b>bold</b>, <i>italic</i>, and 
+  so on.  
+</p>
+
+<h4>font-weight (boldness)</h4>
+<p>
+  The <code>font-weight</code> component specifies how thick the font's 
+  strokes should be.  The most common value by far
+  is <code>bold</code>.  You may also specify <code>normal</code>, 
+  <code>bolder</code>, <code>lighter</code>, or a number from 
+  <code>100</code> to <code>900</code>.  (<code>400</code> is supposed 
+  to correspond to <code>normal</code> and <code>700</code> to 
+  <code>bold</code>.)   
+</p>
+<p>
+  There is also a <code>normal</code> option,
+  which allows you to <em>remove</em> any boldness that has already
+  been applied.  For example, most browsers display the  
+  <code>&lt;strong&gt;</code> tag as <strong>bold text</strong>; writing 
+  <code>strong&nbsp;{font-weight:&nbsp;normal};</code> in your style sheet
+  would force all <code>&lt;strong&gt;</code> tags to not be bold. 
+</p>
+<h4>font-style (italic)</h4>
+<p>
+  The <code>font-style</code> component specifies whether or not the font
+  is slanted (italic).  The most commonly-used value is <code>italic</code>. 
+  As with <code>font-weight</code>, there is a <code>normal</code> that
+  allows you to <em>un</em>-italicize something.
+</p>
+<h4>text-decoration (underlines)</h4>
+<div class="caution">
+<h4 class="inline">Caution:Underlining</h4>
+<p>
+  Most people associated underlined text with hyperlinks. 
+  Avoid underlining your (non-link) text unless absolutely necessary.
+</p>
+</div>
+<p>
+  Let's ignore the fact that <code>text-decoration</code> doesn't  have a
+  sensible, consistent name (such as "font-decoration").  Its purpose is similar
+  to the components we've already discussed.  The
+  <code>text-decoration</code> component provides five options:
+</p>
+<ul>
+  <li><p><code>none</code>: cancels all text-decoration.</p></li>
+  <li><p><code>underline</code>:  creates <span style="text-decoration: underline">underlined</span> text.</p></li>
+  <li><p><code>overline</code>:  creates <span style="text-decoration: overline">overlined</span> text.</p></li>
+  <li><p><code>line-through</code>:  creates <span style="text-decoration: line-through">line-through</span> ("strike-through") text.</p></li>
+  <li><p><code>blink</code>:  creates <span style="text-decoration: blink">blinking</span> text.  Many browsers don't implement this option, and most users find it to be obnoxious.</p></li>
+</ul>
+
+<h3>An Example:  the &lt;em&gt; Tag</h3>
+<p>
+  The <code>&lt;em&gt;</code> tag indicates <em>em</em>phasized text.
+  Most browsers display the <code>&lt;em&gt;</code> tag as simply
+  <i>italic</i>.  Now, there's no particular <em>reason</em> why the 
+  <code>&lt;em&gt;</code> tag should be italic -- that just happens to be 
+  the convention.  So
+  let's say that instead we want our <code>&lt;em&gt;</code> tags
+  to be bold, red, and larger than our default font size.  How would we do this?
+</p>
+<div class="code">
+<h4 class="inline">Styled &lt;em&gt; Tag
+(<code><a href="../examples/styledem.txt">source</a></code>)</h4> <pre>
+&lt;html&gt;
+&lt;head&gt;
+  &lt;title&gt;Oh Better Far to Live and Die&lt;/title&gt;
+  &lt;style type="text/css"&gt;
+  &lt;!--
+    p {
+      font-family: Courier, monospace;
+      font-size: 12pt;
+    }
+    em {
+      font-style: normal;
+      font-weight: bold;
+      font-size: 14pt;
+      color: #ff0000;
+    }
+  --&gt;
+  &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;p&gt;
+  KING:&lt;br&gt;
+  For... I &lt;em&gt;am&lt;/em&gt; a Pirate &lt;em&gt;King!&lt;/em&gt;&lt;br&gt;
+  And it is, it is a glorious thing&lt;br&gt;
+  To be a Pirate King!&lt;br&gt;
+  For I am a Pirate &lt;em&gt;King!&lt;/em&gt;
+&lt;/p&gt;
+&lt;p&gt;
+  ALL:  &lt;br&gt;
+  You are! &lt;br&gt;
+  &lt;em&gt;Hurrah&lt;/em&gt; for the Pirate King!
+&lt;/p&gt;
+&lt;p&gt;
+  KING:&lt;br&gt;
+  And it is, it is a glorious thing &lt;br&gt;
+  To be a Pirate King. 
+&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</pre>
+</div>
+<p>
+  We've defined a default style for our paragraphs, and our 
+  <code>&lt;em&gt;</code> tag style overrides it.  Notice that we don't have
+  to specify the <code>font-style</code> for our paragraphs:  the default
+  value is <code>normal</code> (non-italic), and presumably we're happy
+  with that.
+</p>
+<div class="results">
+<h4 class="inline">Styled &lt;em&gt; Tag (Results)</h4>
+<p style="font-family: courier, monotype; font-size: 12pt;">
+  KING:<br>
+  For... I <em style="font-style: normal; font-weight: bold; font-size: 14pt; color: #ff0000">am</em> a Pirate <em style="font-style: normal; font-weight: bold; font-size: 14pt; color: #ff0000">King!</em><br>
+  And it is, it is a glorious thing<br>
+  To be a Pirate King!<br>
+  For I am a Pirate <em style="font-style: normal; font-weight: bold; font-size: 14pt; color: #ff0000">King!</em>
+</p>
+<p style="font-family: courier, monotype; font-size: 12pt">
+  ALL:  <br>
+  You are! <br>
+  <em style="font-style: normal; font-weight: bold; font-size: 14pt; color: #ff0000">Hurrah</em> for the Pirate King!
+</p>
+<p style="font-family: courier, monotype; font-size: 12pt">
+  KING:<br>
+  And it is, it is a glorious thing<br>
+  To be a Pirate King. 
+</p>
+</div>
+<p>
+  The font styling that we apply to the <code>&lt;p&gt;</code> tag 
+  <em>cascades down</em> to the <code>&lt;em&gt;</code> tag.
+  Let's take a look at what's happening step-by-step.
+</p>
+<ol>
+  <li>
+      <code>font-family</code>:
+  <ul>
+    <li><code>&lt;p&gt;</code> tag: set to "<code>Courier, monospace</code>". If the browser can display Courier it will; otherwise it will serve up a generic monospace font.</li>
+    <li><code>&lt;em&gt;</code> tag: inherits its font-family from the parent tag, <code>&lt;p&gt;</code>.</li>
+  </ul>
+  </li>
+  <li>
+    <code>font-size</code>:
+  <ul>
+    <li><code>&lt;p&gt;</code> tag: set to "<code>12pt</code>".</li>
+    <li><code>&lt;em&gt;</code> tag: set to "<code>14pt</code>", overriding its parent.</li> 
+  </ul>
+  </li>
+  <li>
+    <code>font-weight</code>:
+  <ul>
+    <li><code>&lt;p&gt;</code> tag: not set; takes on the default value of "<code>normal</code>".</li>
+    <li><code>&lt;em&gt;</code> tag: set to "<code>bold</code>", overriding the default <code>&lt;em&gt;</code> value of "<code>normal</code>".</li> 
+  </ul>
+  </li>
+  <li>
+    <code>font-style</code>:
+  <ul>
+    <li><code>&lt;p&gt;</code> tag: not set; takes on the default value of "<code>normal</code>".</li>
+    <li><code>&lt;em&gt;</code> tag: set to "<code>normal</code>", overriding the default <code>&lt;em&gt;</code> value of "<code>italic</code>".</li> 
+  </ul>
+  </li>
+  <li>
+    <code>color</code>:
+  <ul>
+    <li><code>&lt;p&gt;</code> tag: not set; takes on the default value of "<code>#000000</code>".</li>
+    <li><code>&lt;em&gt;</code> tag: set to "<code>#ff0000</code>", overriding the default <code>&lt;em&gt;</code> value of "<code>#000000</code>".</li> 
+  </ul>
+  </li>
+</ol>
+<h3>Shorthand Notation</h3>
+<p>
+  Using <code>font-family</code>, <code>font-size</code>, and so on
+  can get cumbersome.  Fortunately there is a shorthand for all of these
+  properties, named simply, "<code>font</code>".  You need merely
+  place the desired values in the proper order.  This shorthand only encompasses
+  the properties that begin with "<code>font-</code>", so if we 
+  want to do anything else (such as underline our text) we still need to use the
+  appropriate property (such as <code>text-decoration</code>). 
+</p>
+<ol>
+  <li><code>font-style</code> or <code>font-weight</code> or both</li>
+  <li><code>font-size</code></li>
+  <li><code>font-family</code></li>
+</ol>
+<p>
+  You may leave out any of these properties except for the 
+  <code>font-family</code>, as long as everything is in the proper order.
+  Let's take a look at an example of two paragraph classes.  The first class, 
+  <code>p.standard</code>, is 
+  <span style="font: 12pt Verdana">12pt Verdana</span>.  The second class,
+  <code>p.styled</code>, is 
+  <span style="font: bold italic 10pt Verdana; text-decoration: underline; color: #008000">10pt bold italic underlined green Verdana</span>.
+</p>
+<div class="code">
+<h4 class="inline">The font Property</h4>
+<pre>
+  p.standard {
+    font: 12pt Verdana, sans-serif;
+  }
+  p.styled { 
+    font: bold italic 10pt Verdana, sans-serif;
+    text-decoration: underline;
+    color: #008000;
+  }
+</pre>
+</div>
+<p>
+  The <code>font</code> property makes things a bit more elegant.  However,
+  it's hard to remember the exact order... and to make matters worse, some 
+  browsers will display styles that not properly ordered, while others don't.
+  Be sure to verify that that your <code>font</code> declaration is in the proper
+  order before making your design public.
+</p>
+
+<div id="next">
+  
+Next: <a href="borders.html">Borders</a>
+  
+</div>
+		</div><!-- End content -->
+	</div><!-- End main content wrapper -->
+	
+	<div class="clearer"></div>
+	
+	<div id="footer"><!-- Start Footer -->
+		<div id="breadcrumbcontainer"><!-- Start the breadcrumb wrapper -->
+			<ul><li><a href="../../index.html">Home</a>&nbsp;>&nbsp;</li><li><a href="../../tutorial/index.html">Tutorial</a>&nbsp;>&nbsp;</li><li><a href="../../tutorial/intermediate/index.html">Intermediate</a>&nbsp;>&nbsp;</li><li><a href="fontcontrol.html">Font Control</a>&nbsp;>&nbsp;</li></ul>
+		</div><!-- End breadcrumb -->
+		<p>Copyright &copy; 2009 Ross Nelson</p>
+	</div><!-- End Footer -->
+
+</div><!-- End container -->
+</body>
+</html>

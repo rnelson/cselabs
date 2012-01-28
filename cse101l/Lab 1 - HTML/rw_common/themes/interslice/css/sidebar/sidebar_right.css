@@ -1,0 +1,12 @@
+#sidebarContainer {
+	float: right;
+}
+
+#contentContainer {
+	margin-right: 200px;
+	margin-left: 0px;
+}
+
+#pageHeader h1, #pageHeader h2 {
+	padding-left: 2px;
+}

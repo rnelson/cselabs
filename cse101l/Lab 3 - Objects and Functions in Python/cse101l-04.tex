@@ -1,0 +1,204 @@
+% CSCE 101L - Week 4 (Objects and Functions in Python)
+% $Id: cse101l-04.tex 116 2009-02-04 19:14:06Z rnelson $
+
+\documentclass[11pt, letterpaper]{article}
+
+\usepackage{fancyhdr,picture}
+\usepackage{listings}
+\usepackage{times}
+\usepackage{graphicx}
+\usepackage{amssymb}
+\usepackage{algorithm,verbatim}
+\usepackage{charter}
+\usepackage[usenames]{color}
+
+\usepackage[bf, hang, small]{caption}
+%%%%% Set page counter here
+\setcounter{page}{1}
+\renewcommand{\headrulewidth}{1.0pt}
+\renewcommand{\footrulewidth}{1.0pt}
+
+\setlength{\captionmargin}{20pt}
+\setlength{\oddsidemargin}{0.12in}
+\setlength{\textwidth}{6.3in}
+\setlength{\topmargin}{-0.5in}
+\setlength{\textheight}{9.0 in}
+\setlength{\parskip}{3pt plus 1pt minus 1pt}
+
+%%%%% Set header and footer information here
+\pagestyle{fancy}
+\fancyhf{}
+\lhead[]{\small{CSCE 101L}}
+\rhead[]{\small{Week 3}}
+\rfoot[]{\small{University of Nebraska--Lincoln}}
+\lfoot[]{\small{Computer Science and Engineering}}
+\cfoot{\small{\thepage}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+% Define light-gray
+\definecolor{light-gray}{gray}{0.70}
+\lstset{language=Python, backgroundcolor=\color{light-gray}}
+
+\section*{Background}
+
+\subsection*{Procedures}
+
+A {\em procedure} (or a {\em function} or a {\em method}) is a block of code set aside from the rest of the program. They allow you to write a chunk of code that can be run over and over without duplicating the code. Using {\em arguments} (or {\em parameters}), a function can also be made to work differently based on user input.
+
+\subsection*{Python Function Syntax}
+
+\subsubsection*{The {\tt def} keyword}
+
+Functions are created, or {\em defined} using the {\tt def} keyword.
+
+\begin{lstlisting}
+def FUNCTIONNAME(ARGLIST):
+  FUNCTIONBODY
+\end{lstlisting}
+
+Functions have four distinct parts:
+
+\begin{tabular}{l|l}
+	{\tt def}			&	The keyword signifying that we're making a new function\\
+	\hline
+	Function name		&	The name of the function; e.g.: {\tt raw\_input}\\
+	\hline
+	Argument list		&	A list of arguments [{\em optional}]\\
+	\hline
+	Function body		&	The body of the function, the list of commands to run\\
+\end{tabular}
+
+\subsubsection*{Function Name}
+
+The function name follows the same rules as variable naming in Python. For many languages, the following rules apply:
+
+\begin{enumerate}
+	\item Numbers, letters, and the underscore may be used
+	\item Names cannot start with numbers
+	\item Names are case sensitive. {\tt book} $\ne$ {\tt Book} $\ne$ {\tt BoOk}
+\end{enumerate}
+
+\subsubsection*{Argument List}
+
+An argument is used to pass information into the function for it to work with. A function can take $0+$ arguments.
+
+The simplest way to do an argument list in Python is simply a comma-separated list of variable names:
+
+\begin{lstlisting}
+def myFunction(arg1, arg2, arg3):
+  # function body goes here
+\end{lstlisting}
+
+If desired, you can specify default values for any or all parameters. When a default argument is present, this argument becomes optional. If a value is given, it overrides the default. If no value is given, the default is used. Keep all arguments with default values after all arguments without default values.
+
+\begin{lstlisting}
+def myFunction(reqArg1, optArg1=42, optArg2='Hello, World!'):
+  # function body goes here
+\end{lstlisting}
+
+To use a function, simply call it like we did the {\tt raw\_input} function:
+
+\begin{lstlisting}
+def myfunc(age=5, name='Timmy'):
+  print name, 'is', age
+
+myfunc()
+myfunc(25, 'Lisa')
+myfunc(name='Someone')
+\end{lstlisting}
+
+Output:
+
+\begin{verbatim}
+Timmy is 5
+Lisa is 25
+Someone is 5
+\end{verbatim}
+
+\subsubsection*{Function Body}
+
+The function body can contain any executable statement. Examples from last week are {\tt print} and {\tt raw\_input}.
+
+Functions can end with a {\tt return} statement. This is used to {\em return} a value to the caller. You have used functions with return statements when you called {\tt int()}, {\tt float()}, and {\tt raw\_input()}. Here is a simple example:
+
+\begin{lstlisting}
+def getSix():
+  return 6
+var = getSix() # var = 6
+\end{lstlisting}
+
+One thing to be aware of is that spacing is important in Python. All statements in a function body must be indented from the {\tt def}. How you choose to space them in is up to you. One space, two spaces, 18 spaces, one tab, two tabs, whatever. The spacing must be consistent. Consider the following piece of code:
+
+\begin{lstlisting}
+def myfunc():
+  print 'Hello'
+print 'World'
+\end{lstlisting}
+
+The third line, {\tt print ``World''}, is not part of {\tt myfunc()} because it is not indented with {\tt print ``Hello''}.
+
+While this may seem like it would be obvious to catch now, when decision statements and looping structures are added (particularly when {\em nesting} them, having one inside another), keeping track of what body a particular statements belongs to can become difficult.
+
+\subsubsection*{Function Placement}
+
+Languages based off of the C programming language have a function called {\tt main()}, or at least one equivalent to it. Many other types of languages, including Python, have an implicit main.
+
+The main function, the body of code that runs when execution starts, is the end of a Python program. All functions must be defined above it. Example:
+
+\begin{lstlisting}
+def myfunc():
+  # body
+def myotherfunc():
+  # body
+def yetanother():
+  # body
+# this is my ``main''
+\end{lstlisting}
+
+
+
+\section*{Week 4 Lab: Python Functions}
+
+\subsection*{Directions}
+
+This week's lab involves making modifications to your calculator from last week. Open {\tt calc.py} and save it as {\tt funccalc.py}. As with last week, be sure to name it exactly as shown; all letters are lower-case. Save it to {\em Z:}.
+
+Last week's program read in two values from the user and performed the four basic math operations on them. For this week, make the following changes:
+
+\begin{enumerate}
+	\item Do not ask the user for the values, we will hard-code them
+	\item Create a function named {\tt calc} that takes two arguments, {\tt a} and {\tt b}
+	\item Give the {\tt a} a default value of $8$ and {\tt b} a default value of $16$
+	\item The function prints out the four values as it did before; there is no return value
+\end{enumerate}
+
+When this is done, use the following as your ``main'':
+
+\begin{lstlisting}
+calc()
+calc(8, 16)
+calc(b=32)
+calc(b=-8)
+calc(0, 1)
+\end{lstlisting}
+
+Do not add any other {\tt print} statements to the code. I will have a script compare your responses to mine.
+
+\subsection*{Handing in}
+
+Submit your two Python scripts on the {\tt cse101l} handin. They are due by 23:59 on Friday, February 6, 2009.
+
+\subsection*{Grading}
+
+\begin{tabular}{lr}
+	Area & Points\\
+	\hline
+	Works: & 10\\
+	Correct output: & 5\\
+	Correct filename: & 5\\
+	{\bf Total:} & 20
+\end{tabular}
+
+\end{document}

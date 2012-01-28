@@ -1,0 +1,18 @@
+<html>
+<!-- 
+  Copyright Evan Goer, Jan 2003.
+  You may freely copy, share, and modify this file for non-profit, 
+  educational purposes only.  
+-->
+<head>
+    <title>Mangled Heading and Text</title>
+</head>
+<body>
+<h3>Chapter 1
+
+Robert Cohn was once middleweight 
+boxing champion of Princeton.  Do not think I 
+am very much impressed with that as a boxing
+title, but it meant a lot to Cohn.
+</body>
+</html>
