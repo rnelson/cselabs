@@ -26,8 +26,8 @@ class switched hands and my advisor took over. The
 first semester was a poor transitional period, but 
 after that I was able to develop a real lab for it. 
 The lecture was covering [Alice][1], but since the 
-lecture and lab were not co-dependent, [I chose to 
-teach Python][2]. Most everyone came in with no 
+lecture and lab were not co-dependent, I chose to 
+teach Python. Most everyone came in with no 
 programming experience and those in the lecture 
 didn't have a huge advantage over those just taking 
 the lab.
@@ -45,11 +45,9 @@ CSE 150EFL Fortran
 ------------------
 CSE 150E covered two languages, Fortran and Matlab. 
 I was assigned the Fortran labs and taught them for 
-quite a few semesters. [It really isn't a bad 
-language][3] and worked fairly well as an intro 
+quite a few semesters. It really isn't a bad 
+language and worked fairly well as an intro 
 programming class. As this _is_ the latest version, 
 all notes are PowerPoint slides.
 
 [1]: http://www.alice.org
-[2]: http://cse.unl.edu/~rnelson/python.php
-[3]: http://cse.unl.edu/~rnelson/fortran.php
